@@ -13,6 +13,7 @@ module WhatTheGem
 
         Latest version: #{info['version']}
         Installed versions: #{specs.map(&:version).join(', ')}
+        Most recent installed at: #{specs.last.gem_dir}
       INFO
     end
   end

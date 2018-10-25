@@ -55,8 +55,8 @@ module WhatTheGem
 
     memoize def github
       rubygems.info.values_at('source_code_uri', 'homepage_uri')
-        .yield_self(&method(:detect_repo_id))
-        &.yield_self(&GitHub.method(:new))
+        .then(&method(:detect_repo_id))
+        &.then(&GitHub.method(:new))
     end
 
     memoize def specs

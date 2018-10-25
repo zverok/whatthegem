@@ -3,4 +3,7 @@ require 'memoist'
 require 'pp'
 require 'hm'
 
-Object.extend Memoist
+class Object
+  extend Memoist
+  alias then yield_self # will be so in Ruby 2.6
+end
