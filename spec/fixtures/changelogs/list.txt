@@ -1,0 +1,23 @@
+rubocop
+sinatra
+sequel
+timecop
+yard
+wicked_pdf
+ruby-prof
+rake
+prawn
+google-api-client
+geocoder
+dotenv
+coffee-rails
+tzinfo
+vcr
+concurrent-ruby
+draper
+# sass -- just don't has it. At all
+# faraday -- GH releases
+# octokit -- GH releases
+# activerecord -- complex GH URL
+# kramdown -- custom site, impossible (?) to support
+# rspec -- meta-gem

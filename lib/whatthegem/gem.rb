@@ -1,5 +1,6 @@
 require 'gems'
 require 'octokit'
+require 'base64'
 
 module WhatTheGem
   class Gem
@@ -14,8 +15,43 @@ module WhatTheGem
         end
       end
 
+      CHANGELOG_PATTERN = /^(history|changelog|changes)(\.\w+)?$/i
+
+      attr_reader :repo_id
+
       def initialize(repo_id)
         @repo_id = repo_id
+      end
+
+      def releases
+        req(:releases)
+      end
+
+      def contents(path = '.')
+        req(:contents, path: path)
+      end
+
+      alias files contents
+
+      def changelog
+        files.detect { |f| f.name.match?(CHANGELOG_PATTERN) }
+          &.then { |f| contents(f.path) }
+          &.then(&method(:decode_content))
+      end
+
+      private
+
+      def req(method, *args)
+        octokit.public_send(method, repo_id, *args).then(&Hobject.method(:deep))
+      end
+
+      def decode_content(obj)
+        # TODO: encoding is specified as a part of the answer, could it be other than base64?
+        obj.merge(text: Base64.decode64(obj.content))
+      end
+
+      def octokit
+        self.class.octokit
       end
     end
 
@@ -43,6 +79,8 @@ module WhatTheGem
       end
     end
 
+    GITHUB_URI_PATTERN = %r{^https?://(www\.)?github\.com/}
+
     attr_reader :name
 
     def initialize(name)
@@ -61,6 +99,14 @@ module WhatTheGem
 
     memoize def specs
       ::Gem::Specification.select { |s| s.name == name }.sort_by(&:version)
+    end
+
+    private
+
+    # FIXME: active_record's actual path is https://github.com/rails/rails/tree/v5.2.1/activerecord
+    def detect_repo_id(urls)
+      repo_url = urls.grep(GITHUB_URI_PATTERN).first or return nil
+      Octokit::Repository.from_url(repo_url).slug
     end
   end
 end
