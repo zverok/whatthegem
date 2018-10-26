@@ -12,7 +12,7 @@ module WhatTheGem
   # friendly report of "usage instructions not found"
   #
   # bugs with:
-  # * https://github.com/jeremyevans/sequel -- not first code example
+  # * https://github.com/jeremyevans/sequel -- not first code example (because it is rdoc, not markdown, stupid!)
   #
   # If gem not found locally -- fetch from GitHub
   # Usage for specific version?..

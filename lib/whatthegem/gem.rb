@@ -47,7 +47,7 @@ module WhatTheGem
 
       def decode_content(obj)
         # TODO: encoding is specified as a part of the answer, could it be other than base64?
-        obj.merge(text: Base64.decode64(obj.content))
+        obj.merge(text: Base64.decode64(obj.content).force_encoding('UTF-8'))
       end
 
       def octokit
@@ -63,19 +63,25 @@ module WhatTheGem
       end
 
       memoize def info
-        ::Gems.info(name)
+        req(:info)
+      end
+
+      memoize def versions
+        req(:versions)
+      end
+
+      memoize def reverse_dependencies
+        req(:reverse_dependencies)
+      end
+
+      private
+
+      def req(method, *args)
+        ::Gems.public_send(method, name, *args).then(&Hobject.method(:deep))
       rescue JSON::ParserError => e
         # Gems have no cleaner way to indicate gem does not exist :shrug:
         raise unless e.message.include?('This rubygem could not be found.')
         abort("Gem #{name} does not exist.")
-      end
-
-      memoize def versions
-        ::Gems.versions(name)
-      end
-
-      memoize def reverse_dependencies
-        ::Gems.reverse_dependencies(name)
       end
     end
 
@@ -92,7 +98,7 @@ module WhatTheGem
     end
 
     memoize def github
-      rubygems.info.values_at('source_code_uri', 'homepage_uri')
+      rubygems.info.to_h.values_at(:source_code_uri, :homepage_uri)
         .then(&method(:detect_repo_id))
         &.then(&GitHub.method(:new))
     end

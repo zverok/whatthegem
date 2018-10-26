@@ -11,7 +11,7 @@ module WhatTheGem
         end
       end
 
-      VERSION_REGEXP = /^(\d+\.\d+(\.\d+)?)\s/
+      VERSION_REGEXP = /^(\d+\.\d+(\.\d+)?)(\s|$)/
 
       attr_reader :filename, :content
 
