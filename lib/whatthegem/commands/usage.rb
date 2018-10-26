@@ -20,18 +20,29 @@ module WhatTheGem
     register 'usage'
 
     def call
-      gem.specs.last
-        .then { |spec|
-          Dir[File.join(spec.gem_dir, 'README{,.*}')].first or
-            abort "README not found in #{spec.gem_dir}"
-        }
-        .then { |readme| Kramdown::Document.new(File.read(readme), input: 'GFM') }
+      readme
+        .then { |readme| Kramdown::Document.new(readme, input: 'GFM') }
         .root.children.select { |c| c.type == :codeblock }
         .map(&:value).map(&:strip)
-        .grep_v(/^(gem ['"]|gem install|bundle install|\$)/)
+        .grep_v(/^(gem ['"]|gem install|bundle install|rails g |git clone|\$)/)
         .first(2)
         .join("\n\n")
         .tap(&method(:puts))
+    end
+
+    private
+
+    def readme
+      local_readme || github_readme or abort "README not found"
+            # abort "README not found in #{spec.gem_dir}"
+    end
+
+    def local_readme
+      gem.specs.last&.gem_dir&.then(&Pathname.method(:new))&.glob('README{,.*}')&.first&.read
+    end
+
+    def github_readme
+      gem.github&.readme&.text
     end
   end
 end

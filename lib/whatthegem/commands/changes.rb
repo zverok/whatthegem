@@ -1,8 +1,4 @@
 module WhatTheGem
-  # TODO: which versions to output:
-  # * not installed locally: just last and last major
-  # * installed locally: everything since installed locally
-  # * installed locally and fresh: last
   class Changes < Command
     register 'changes'
 

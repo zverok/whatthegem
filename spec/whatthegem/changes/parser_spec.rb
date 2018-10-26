@@ -44,5 +44,7 @@ RSpec.describe WhatTheGem::Changes::Parser do
   end
 
   include_examples 'parses successfully', 'rubocop'
+  include_examples 'parses successfully', 'faker'
   include_examples 'parses changelog', 'vcr', versions: %w[4.0.0 3.0.3 3.0.2]
+  # warden: fallback to just text parse, they have weird "== Version 1.2.3", which is not markdown
 end

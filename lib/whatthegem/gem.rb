@@ -52,12 +52,20 @@ module WhatTheGem
       alias files contents
 
       memoize def changelog
-        files.detect { |f| f.name.match?(CHANGELOG_PATTERN) }
-          &.then { |f| contents(f.path) }
-          &.then(&method(:decode_content))
+        locate_file(CHANGELOG_PATTERN)
+      end
+
+      memoize def readme
+        locate_file(/^readme(\.\w+)?$/i)
       end
 
       private
+
+      def locate_file(pattern)
+        files.detect { |f| f.name.match?(pattern) }
+          &.then { |f| contents(f.path) }
+          &.then(&method(:decode_content))
+      end
 
       def req(method, *args)
         octokit.public_send(method, repo_id, *args).then(&Hobject.method(:deep))

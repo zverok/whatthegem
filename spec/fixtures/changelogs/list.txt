@@ -15,9 +15,17 @@ tzinfo
 vcr
 concurrent-ruby
 draper
-# sass -- just don't has it. At all
-# faraday -- GH releases
-# octokit -- GH releases
+faker
+# factory_bot -- NEWS, plaintext file
+
+# GH releases:
+# faraday
+# octokit
+# minimagick
+
 # activerecord -- complex GH URL
+
+# Unfixable:
+# sass -- just don't has it. At all
 # kramdown -- custom site, impossible (?) to support
 # rspec -- meta-gem
