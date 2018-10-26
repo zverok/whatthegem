@@ -7,6 +7,8 @@ module WhatTheGem
     register 'changes'
 
     def call
+      return if !versions || versions.empty?
+
       puts versions.last.header
       puts
       puts versions.last.body
@@ -16,10 +18,8 @@ module WhatTheGem
 
     memoize def versions
       gem.github # always take the freshest from GitHub, even when installed locally
-        .changelog
-        .then { |file|
-          Parser.call(file.name, file.text)
-        }
+        &.changelog
+        &.then { |file| Parser.call(file.name, file.text) }
     end
   end
 end

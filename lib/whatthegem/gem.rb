@@ -23,7 +23,25 @@ module WhatTheGem
         @repo_id = repo_id
       end
 
-      def releases
+      memoize def repository
+        req(:repository)
+      end
+
+      alias repo repository
+
+      memoize def last_commit
+        req(:commits, per_page: 1).first
+      end
+
+      memoize def open_issues
+        req(:issues, state: 'open', per_page: 50)
+      end
+
+      memoize def closed_issues
+        req(:issues, state: 'closed', per_page: 50)
+      end
+
+      memoize def releases
         req(:releases)
       end
 
@@ -33,7 +51,7 @@ module WhatTheGem
 
       alias files contents
 
-      def changelog
+      memoize def changelog
         files.detect { |f| f.name.match?(CHANGELOG_PATTERN) }
           &.then { |f| contents(f.path) }
           &.then(&method(:decode_content))

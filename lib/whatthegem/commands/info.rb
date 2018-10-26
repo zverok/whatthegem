@@ -10,7 +10,7 @@ module WhatTheGem
       # better than RSpec. (At the same time, RSpec's info reads "BDD for Ruby".)
 
       puts <<~INFO
-        #{info.name} (#{[info.homepage_uri, info.source_code_uri].uniq.join(', ')})
+        #{info.name} (#{[info.homepage_uri, info.source_code_uri].compact.uniq.join(', ')})
 
         #{info.info.split("\n\n").first}
 
