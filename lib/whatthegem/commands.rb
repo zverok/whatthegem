@@ -18,14 +18,10 @@ module WhatTheGem
       end
     end
 
-    attr_reader :name
+    attr_reader :gem
 
-    def initialize(name)
-      @name = name
-    end
-
-    memoize def gem
-      Gem.new(name)
+    def initialize(gem)
+      @gem = gem
     end
   end
 end

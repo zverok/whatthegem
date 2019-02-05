@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'time_math2'
   s.add_runtime_dependency 'hm'
   s.add_runtime_dependency 'kramdown'
+  s.add_runtime_dependency 'liquid'
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rubygems-tasks'

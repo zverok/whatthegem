@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/rubocop.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Gems 1.1.1
+      - Ruby
+      Authorization:
+      - 6afb342e528a1f624b7bac0da9cb9a1d
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'self'; script-src 'self' https://secure.gaug.es https://www.fastly-insights.com;
+        style-src 'self' https://fonts.googleapis.com; img-src 'self' https://secure.gaug.es
+        https://gravatar.com https://secure.gravatar.com https://*.fastly-insights.com;
+        font-src 'self' https://fonts.gstatic.com; connect-src https://s3-us-west-2.amazonaws.com/rubygems-dumps/
+        https://*.fastly-insights.com https://api.github.com;
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3855b005-39d0-408a-b2fc-b7e02b8e1181
+      X-Runtime:
+      - '0.016015'
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      X-Backend:
+      - F_Rails 54.186.104.15:443
+      Accept-Ranges:
+      - bytes
+      - bytes
+      Age:
+      - '0'
+      - '0'
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 05 Feb 2019 15:01:18 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-hhn1551-HHN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1549378879.676655,VS0,VE190
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"500217f46e7cc54a7b4c6f1bb62b69fb"'
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"rubocop","downloads":48893802,"version":"0.63.1","version_downloads":209745,"platform":"ruby","authors":"Bozhidar
+        Batsov, Jonas Arvidsson, Yuji Nakayama","info":"    Automatic Ruby code style
+        checking tool.\n    Aims to enforce the community-driven Ruby Style Guide.\n","licenses":["MIT"],"metadata":{"homepage_uri":"https://www.rubocop.org/","changelog_uri":"https://github.com/rubocop-hq/rubocop/blob/master/CHANGELOG.md","bug_tracker_uri":"https://github.com/rubocop-hq/rubocop/issues","source_code_uri":"https://github.com/rubocop-hq/rubocop/","documentation_uri":"https://docs.rubocop.org/"},"sha":"5e8a8fadbe248ff9c3727b603d66f23658fe1e1965ae07571365b34a390600df","project_uri":"https://rubygems.org/gems/rubocop","gem_uri":"https://rubygems.org/gems/rubocop-0.63.1.gem","homepage_uri":"https://www.rubocop.org/","wiki_uri":null,"documentation_uri":"https://docs.rubocop.org/","mailing_list_uri":null,"source_code_uri":"https://github.com/rubocop-hq/rubocop/","bug_tracker_uri":"https://github.com/rubocop-hq/rubocop/issues","changelog_uri":"https://github.com/rubocop-hq/rubocop/blob/master/CHANGELOG.md","dependencies":{"development":[{"name":"bundler","requirements":"\u003e=
+        1.3.0, \u003c 3.0"},{"name":"rack","requirements":"\u003e= 2.0"}],"runtime":[{"name":"jaro_winkler","requirements":"~\u003e
+        1.5.1"},{"name":"parallel","requirements":"~\u003e 1.10"},{"name":"parser","requirements":"\u003e=
+        2.5, != 2.5.1.1"},{"name":"powerpack","requirements":"~\u003e 0.1"},{"name":"rainbow","requirements":"\u003e=
+        2.2.2, \u003c 4.0"},{"name":"ruby-progressbar","requirements":"~\u003e 1.7"},{"name":"unicode-display_width","requirements":"~\u003e
+        1.4.0"}]}}'
+    http_version: 
+  recorded_at: Tue, 05 Feb 2019 15:01:18 GMT
+recorded_with: VCR 4.0.0

@@ -2,22 +2,61 @@ module WhatTheGem
   class Info < Command
     register 'info'
 
+    # About info shortening: It is because minitest pastes their whole README
+    # there, including a quotations of how they are better than RSpec.
+    # (At the same time, RSpec's info reads "BDD for Ruby".)
+    # TODO: filter `paragraphs: 1`
+
+    TEMPLATE = Template.parse(<<~INFO.rstrip)
+      {{info.name}} ({{uris | join:", "}})
+
+      {{info.info | paragraphs:1 }}
+
+      Latest version: {{info.version}}
+
+      ## Global
+
+      Installed versions: {% if specs %}{{ specs | map:"version" | join: ", "}}{% else %}—{% endif %}
+      {% if current %}Most recent installed at: {{current.dir}}{% endif %}
+      {% unless bundled.type == 'nobundle' %}
+      ## Bundle
+
+      {% if bundled.type == 'notbundled' %}Not in a bundle{% else
+      %}Bundled version: {{ bundled.version }} at {{ bundled.dir }}{% endif %}
+      {% endunless %}
+    INFO
+
     def call
-      info = gem.rubygems.info
-      specs = gem.specs
+      locals.then(&TEMPLATE).tap(&method(:puts))
+    end
 
-      # Because minitest pastes their whole README there, including a quotations of how they are
-      # better than RSpec. (At the same time, RSpec's info reads "BDD for Ruby".)
+    def locals
+      {
+        info: gem.rubygems.info,
+        uris: guess_uris(gem.rubygems.info),
+        specs: specs,
+        current: specs.last,
+        bundled: gem.bundled.to_h
+      }
+    end
 
-      puts <<~INFO
-        #{info.name} (#{[info.homepage_uri, info.source_code_uri].compact.uniq.join(', ')})
+    private
 
-        #{info.info.split("\n\n").first}
+    def specs
+      gem.specs.map { |spec|
+        {
+          name: spec.name,
+          version: spec.version.to_s,
+          dir: spec.gem_dir
+        }
+      }
+    end
 
-        Latest version: #{info.version}
-        Installed versions: #{specs.map(&:version).join(', ')}
-        Most recent installed at: #{specs.last&.gem_dir}
-      INFO
+    def guess_uris(info)
+      [
+        info[:source_code_uri],
+        info.values_at(:homepage_uri, :documentation_uri, :project_uri).first
+      ].compact.uniq { |u| u.chomp('/') }
     end
   end
 end

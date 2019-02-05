@@ -3,6 +3,10 @@ $LOAD_PATH.unshift File.expand_path '../lib', __dir__
 
 require 'whatthegem'
 
-cmd, *args = ARGV
+cmd, name, *args = ARGV
 
-WhatTheGem::Command.fetch(cmd).call(*args)
+gem = WhatTheGem::Gem.fetch(name)
+
+WhatTheGem::Command.fetch(cmd).call(gem, *args)
+
+# WhatTheGem::Command.fetch(cmd).call(*args)
