@@ -1,3 +1,5 @@
+require_relative '../changelog_parser'
+
 module WhatTheGem
   class Changes < Command
     register 'changes'
@@ -19,5 +21,3 @@ module WhatTheGem
     end
   end
 end
-
-require_relative 'changes/parser'

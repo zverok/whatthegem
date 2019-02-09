@@ -1,4 +1,4 @@
-RSpec.describe WhatTheGem::Changes::Parser do
+RSpec.describe WhatTheGem::ChangelogParser do
   # it_behaves_like 'parses changelog', 'sequel',
   #   versions: %w[5.13.0 5.12.0 5.11.0 5.10.0 ...],
   #   latest: <<~CHANGES,
@@ -14,13 +14,18 @@ RSpec.describe WhatTheGem::Changes::Parser do
   #     CHANGES
   #   }
 
+  def changelog(name)
+    VCR.use_cassette("changelog/#{name}") do
+      WhatTheGem::Gem.new(name).github.changelog
+    end
+  end
+
   let(:fixtures) { Pathname.new('spec/fixtures/changelogs') }
 
   shared_context 'parse changelog' do
-    let(:path) { fixtures.glob("#{gem_name}__*{,.*}").first }
-    let(:content) { path.read }
+    let(:file) { changelog(gem_name) }
 
-    subject(:versions) { described_class.call(path.basename, content) }
+    subject(:versions) { described_class.call(file) }
   end
 
   shared_examples 'parses successfully' do |name|
@@ -46,5 +51,5 @@ RSpec.describe WhatTheGem::Changes::Parser do
   include_examples 'parses successfully', 'rubocop'
   include_examples 'parses successfully', 'faker'
   include_examples 'parses changelog', 'vcr', versions: %w[4.0.0 3.0.3 3.0.2]
-  # warden: fallback to just text parse, they have weird "== Version 1.2.3", which is not markdown
+  # ? warden: fallback to just text parse, they have weird "== Version 1.2.3", which is not markdown
 end
