@@ -50,6 +50,39 @@ RSpec.describe WhatTheGem::ChangelogParser do
 
   include_examples 'parses successfully', 'rubocop'
   include_examples 'parses successfully', 'faker'
+  include_examples 'parses changelog', 'tzinfo', versions: %w[2.0.0 1.2.5 1.2.4 1.2.3]
   include_examples 'parses changelog', 'vcr', versions: %w[4.0.0 3.0.3 3.0.2]
+
+  # More examples:
+  # sinatra
+  # sequel
+  # timecop
+  # yard
+  # wicked_pdf
+  # ruby-prof
+  # rake
+  # prawn
+  # google-api-client
+  # geocoder
+  # dotenv
+  # coffee-rails
+  # concurrent-ruby
+  # draper
+
+  # Complicated:
+  # factory_bot -- NEWS, plaintext file
+  # sassc-ruby: just list in markdown, no headers
   # ? warden: fallback to just text parse, they have weird "== Version 1.2.3", which is not markdown
+
+  # GH releases:
+  # faraday
+  # octokit
+  # minimagick
+
+  # activerecord -- complex GH URL
+
+  # Unfixable:
+  # sass -- just don't has it. At all
+  # kramdown -- custom site, impossible (?) to support
+  # rspec -- meta-gem
 end
