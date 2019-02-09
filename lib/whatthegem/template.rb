@@ -6,10 +6,14 @@ module WhatTheGem
       def paragraphs(text, num)
         text.split("\n\n").first(num).join("\n\n").gsub(/\n +/, "\n").strip
       end
+
+      def nfirst(array, num)
+        array.first(num)
+      end
     end
 
     def self.parse(src)
-      new.parse(src)
+      new.parse(src.rstrip)
     end
 
     def parse(src)

@@ -10,3 +10,11 @@ VCR.configure do |config|
 end
 
 require 'whatthegem'
+
+class String
+  def squig
+    res = rstrip
+    remove = res.scan(/^( +)/).flatten.map(&:length).min
+    res.gsub(/^ {#{remove}}/, '').strip
+  end
+end

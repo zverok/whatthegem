@@ -7,7 +7,7 @@ module WhatTheGem
     # (At the same time, RSpec's info reads "BDD for Ruby".)
     # TODO: filter `paragraphs: 1`
 
-    TEMPLATE = Template.parse(<<~INFO.rstrip)
+    TEMPLATE = Template.parse(<<~INFO)
       {{info.name}} ({{uris | join:", "}})
 
       {{info.info | paragraphs:1 }}

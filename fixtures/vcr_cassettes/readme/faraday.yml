@@ -1,0 +1,243 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/faraday.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Gems 1.1.1
+      - Ruby
+      Authorization:
+      - 6afb342e528a1f624b7bac0da9cb9a1d
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'self'; script-src 'self' https://secure.gaug.es https://www.fastly-insights.com;
+        style-src 'self' https://fonts.googleapis.com; img-src 'self' https://secure.gaug.es
+        https://gravatar.com https://secure.gravatar.com https://*.fastly-insights.com;
+        font-src 'self' https://fonts.gstatic.com; connect-src https://s3-us-west-2.amazonaws.com/rubygems-dumps/
+        https://*.fastly-insights.com https://api.github.com;
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4f5286d8-52ee-48a5-81d4-82f9634548a5
+      X-Runtime:
+      - '0.014294'
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      X-Backend:
+      - F_Rails 54.186.104.15:443
+      Accept-Ranges:
+      - bytes
+      - bytes
+      Age:
+      - '0'
+      - '0'
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Sat, 09 Feb 2019 09:35:34 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-hhn1523-HHN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1549704934.414141,VS0,VE185
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"2411fff970344b6d57184e46b3e47e1c"'
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"faraday","downloads":132267336,"version":"0.15.4","version_downloads":5011000,"platform":"ruby","authors":"Rick
+        Olson","info":"HTTP/REST API client library.","licenses":["MIT"],"metadata":{},"sha":"00e6ffd6f1bccd9dc9e3b993a0004e69680559422206ce4cbb81fd2d0ba8e268","project_uri":"https://rubygems.org/gems/faraday","gem_uri":"https://rubygems.org/gems/faraday-0.15.4.gem","homepage_uri":"https://github.com/lostisland/faraday","wiki_uri":null,"documentation_uri":"http://www.rubydoc.info/gems/faraday/0.15.4","mailing_list_uri":null,"source_code_uri":null,"bug_tracker_uri":null,"changelog_uri":null,"dependencies":{"development":[],"runtime":[{"name":"multipart-post","requirements":"\u003c
+        3, \u003e= 1.2"}]}}'
+    http_version: 
+  recorded_at: Sat, 09 Feb 2019 09:35:35 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/lostisland/faraday/contents/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.13.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sat, 09 Feb 2019 09:35:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '59'
+      X-Ratelimit-Reset:
+      - '1549708535'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      Etag:
+      - W/"b4044f1ac252c53aae07537f6b9c2025ad2853b4"
+      Last-Modified:
+      - Fri, 08 Feb 2019 07:13:59 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - 9350:28E2:12C2A53:28384A3:5C5E9EE6
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"name":".document","path":".document","sha":"7bdcb20307c8901acc3cf9a572fc79a4c8b9abed","size":65,"url":"https://api.github.com/repos/lostisland/faraday/contents/.document?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/.document","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/7bdcb20307c8901acc3cf9a572fc79a4c8b9abed","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/.document","type":"file","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/.document?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/7bdcb20307c8901acc3cf9a572fc79a4c8b9abed","html":"https://github.com/lostisland/faraday/blob/master/.document"}},{"name":".github","path":".github","sha":"42f4b3aea23d39e4b97f7b26c9ce2b759951953b","size":0,"url":"https://api.github.com/repos/lostisland/faraday/contents/.github?ref=master","html_url":"https://github.com/lostisland/faraday/tree/master/.github","git_url":"https://api.github.com/repos/lostisland/faraday/git/trees/42f4b3aea23d39e4b97f7b26c9ce2b759951953b","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/.github?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/trees/42f4b3aea23d39e4b97f7b26c9ce2b759951953b","html":"https://github.com/lostisland/faraday/tree/master/.github"}},{"name":".gitignore","path":".gitignore","sha":"a938783be6f92922c6b9d1b2f962e0d78804418b","size":173,"url":"https://api.github.com/repos/lostisland/faraday/contents/.gitignore?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/.gitignore","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/a938783be6f92922c6b9d1b2f962e0d78804418b","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/.gitignore","type":"file","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/.gitignore?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/a938783be6f92922c6b9d1b2f962e0d78804418b","html":"https://github.com/lostisland/faraday/blob/master/.gitignore"}},{"name":".travis.yml","path":".travis.yml","sha":"2d6535f566218a6adbb7797af5254df7e19798f4","size":1081,"url":"https://api.github.com/repos/lostisland/faraday/contents/.travis.yml?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/.travis.yml","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/2d6535f566218a6adbb7797af5254df7e19798f4","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/.travis.yml","type":"file","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/.travis.yml?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/2d6535f566218a6adbb7797af5254df7e19798f4","html":"https://github.com/lostisland/faraday/blob/master/.travis.yml"}},{"name":"CHANGELOG.md","path":"CHANGELOG.md","sha":"1fd8455850837351c46663e8dcb220b24d9da157","size":1022,"url":"https://api.github.com/repos/lostisland/faraday/contents/CHANGELOG.md?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/CHANGELOG.md","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/1fd8455850837351c46663e8dcb220b24d9da157","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/CHANGELOG.md","type":"file","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/CHANGELOG.md?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/1fd8455850837351c46663e8dcb220b24d9da157","html":"https://github.com/lostisland/faraday/blob/master/CHANGELOG.md"}},{"name":"Gemfile","path":"Gemfile","sha":"42a8c942c5eacca96b8d014c812b815ee3d3951e","size":1006,"url":"https://api.github.com/repos/lostisland/faraday/contents/Gemfile?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/Gemfile","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/42a8c942c5eacca96b8d014c812b815ee3d3951e","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/Gemfile","type":"file","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/Gemfile?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/42a8c942c5eacca96b8d014c812b815ee3d3951e","html":"https://github.com/lostisland/faraday/blob/master/Gemfile"}},{"name":"LICENSE.md","path":"LICENSE.md","sha":"327f16f81120fa0e0782553c71f84d6e946b263d","size":1072,"url":"https://api.github.com/repos/lostisland/faraday/contents/LICENSE.md?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/LICENSE.md","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/327f16f81120fa0e0782553c71f84d6e946b263d","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/LICENSE.md","type":"file","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/LICENSE.md?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/327f16f81120fa0e0782553c71f84d6e946b263d","html":"https://github.com/lostisland/faraday/blob/master/LICENSE.md"}},{"name":"README.md","path":"README.md","sha":"8a273d06247130ad99b2f6df172c8feb78761bb3","size":12611,"url":"https://api.github.com/repos/lostisland/faraday/contents/README.md?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/README.md","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/8a273d06247130ad99b2f6df172c8feb78761bb3","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/README.md","type":"file","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/README.md?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/8a273d06247130ad99b2f6df172c8feb78761bb3","html":"https://github.com/lostisland/faraday/blob/master/README.md"}},{"name":"Rakefile","path":"Rakefile","sha":"2830fb212f22e343e05a370a71ef7269bb1679b9","size":109,"url":"https://api.github.com/repos/lostisland/faraday/contents/Rakefile?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/Rakefile","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/2830fb212f22e343e05a370a71ef7269bb1679b9","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/Rakefile","type":"file","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/Rakefile?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/2830fb212f22e343e05a370a71ef7269bb1679b9","html":"https://github.com/lostisland/faraday/blob/master/Rakefile"}},{"name":"faraday.gemspec","path":"faraday.gemspec","sha":"5693475f271a1713e051b1f5bb6bf0f414781c16","size":606,"url":"https://api.github.com/repos/lostisland/faraday/contents/faraday.gemspec?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/faraday.gemspec","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/5693475f271a1713e051b1f5bb6bf0f414781c16","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/faraday.gemspec","type":"file","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/faraday.gemspec?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/5693475f271a1713e051b1f5bb6bf0f414781c16","html":"https://github.com/lostisland/faraday/blob/master/faraday.gemspec"}},{"name":"lib","path":"lib","sha":"e6c462a9a186ae2af0d9614df290011b3296f030","size":0,"url":"https://api.github.com/repos/lostisland/faraday/contents/lib?ref=master","html_url":"https://github.com/lostisland/faraday/tree/master/lib","git_url":"https://api.github.com/repos/lostisland/faraday/git/trees/e6c462a9a186ae2af0d9614df290011b3296f030","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/lib?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/trees/e6c462a9a186ae2af0d9614df290011b3296f030","html":"https://github.com/lostisland/faraday/tree/master/lib"}},{"name":"script","path":"script","sha":"b9d0933e6027f5244f2568353b23cb60af9a74d0","size":0,"url":"https://api.github.com/repos/lostisland/faraday/contents/script?ref=master","html_url":"https://github.com/lostisland/faraday/tree/master/script","git_url":"https://api.github.com/repos/lostisland/faraday/git/trees/b9d0933e6027f5244f2568353b23cb60af9a74d0","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/script?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/trees/b9d0933e6027f5244f2568353b23cb60af9a74d0","html":"https://github.com/lostisland/faraday/tree/master/script"}},{"name":"test","path":"test","sha":"7dbab9ec45bd2bf1b25c55c703c0a68932f4a1e8","size":0,"url":"https://api.github.com/repos/lostisland/faraday/contents/test?ref=master","html_url":"https://github.com/lostisland/faraday/tree/master/test","git_url":"https://api.github.com/repos/lostisland/faraday/git/trees/7dbab9ec45bd2bf1b25c55c703c0a68932f4a1e8","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/test?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/trees/7dbab9ec45bd2bf1b25c55c703c0a68932f4a1e8","html":"https://github.com/lostisland/faraday/tree/master/test"}}]'
+    http_version: 
+  recorded_at: Sat, 09 Feb 2019 09:35:35 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/lostisland/faraday/contents/README.md
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.13.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sat, 09 Feb 2019 09:35:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '58'
+      X-Ratelimit-Reset:
+      - '1549708535'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      Etag:
+      - W/"8a273d06247130ad99b2f6df172c8feb78761bb3"
+      Last-Modified:
+      - Thu, 07 Feb 2019 18:27:59 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - EB22:41D8:13EF744:2AFF0F5:5C5E9EE7
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"README.md","path":"README.md","sha":"8a273d06247130ad99b2f6df172c8feb78761bb3","size":12611,"url":"https://api.github.com/repos/lostisland/faraday/contents/README.md?ref=master","html_url":"https://github.com/lostisland/faraday/blob/master/README.md","git_url":"https://api.github.com/repos/lostisland/faraday/git/blobs/8a273d06247130ad99b2f6df172c8feb78761bb3","download_url":"https://raw.githubusercontent.com/lostisland/faraday/master/README.md","type":"file","content":"IyBGYXJhZGF5CgpbIVtHZW0gVmVyc2lvbl0oaHR0cHM6Ly9iYWRnZS5mdXJ5\nLmlvL3JiL2ZhcmFkYXkuc3ZnKV0oaHR0cHM6Ly9ydWJ5Z2Vtcy5vcmcvZ2Vt\ncy9mYXJhZGF5KQpbIVtCdWlsZCBTdGF0dXNdKGh0dHBzOi8vdHJhdmlzLWNp\nLm9yZy9sb3N0aXNsYW5kL2ZhcmFkYXkuc3ZnKV0oaHR0cHM6Ly90cmF2aXMt\nY2kub3JnL2xvc3Rpc2xhbmQvZmFyYWRheSkKWyFbQ292ZXJhZ2UgU3RhdHVz\nXShodHRwczovL2NvdmVyYWxscy5pby9yZXBvcy9naXRodWIvbG9zdGlzbGFu\nZC9mYXJhZGF5L2JhZGdlLnN2Zz9icmFuY2g9bWFzdGVyKV0oaHR0cHM6Ly9j\nb3ZlcmFsbHMuaW8vZ2l0aHViL2xvc3Rpc2xhbmQvZmFyYWRheT9icmFuY2g9\nbWFzdGVyKQpbIVtDb2RlIENsaW1hdGVdKGh0dHBzOi8vY29kZWNsaW1hdGUu\nY29tL2dpdGh1Yi9sb3N0aXNsYW5kL2ZhcmFkYXkvYmFkZ2VzL2dwYS5zdmcp\nXShodHRwczovL2NvZGVjbGltYXRlLmNvbS9naXRodWIvbG9zdGlzbGFuZC9m\nYXJhZGF5KQpbIVtHaXR0ZXJdKGh0dHBzOi8vYmFkZ2VzLmdpdHRlci5pbS9s\nb3N0aXNsYW5kL2ZhcmFkYXkuc3ZnKV0oaHR0cHM6Ly9naXR0ZXIuaW0vbG9z\ndGlzbGFuZC9mYXJhZGF5P3V0bV9zb3VyY2U9YmFkZ2UmdXRtX21lZGl1bT1i\nYWRnZSZ1dG1fY2FtcGFpZ249cHItYmFkZ2UpCgoKRmFyYWRheSBpcyBhbiBI\nVFRQIGNsaWVudCBsaWIgdGhhdCBwcm92aWRlcyBhIGNvbW1vbiBpbnRlcmZh\nY2Ugb3ZlciBtYW55CmFkYXB0ZXJzIChzdWNoIGFzIE5ldDo6SFRUUCkgYW5k\nIGVtYnJhY2VzIHRoZSBjb25jZXB0IG9mIFJhY2sgbWlkZGxld2FyZSB3aGVu\nCnByb2Nlc3NpbmcgdGhlIHJlcXVlc3QvcmVzcG9uc2UgY3ljbGUuCgpGYXJh\nZGF5IHN1cHBvcnRzIHRoZXNlIGFkYXB0ZXJzIG91dCBvZiB0aGUgYm94OgoK\nKiBbTmV0OjpIVFRQXVtuZXRfaHR0cF0gXyhkZWZhdWx0KV8KKiBbTmV0OjpI\nVFRQOjpQZXJzaXN0ZW50XVtwZXJzaXN0ZW50XQoqIFtFeGNvbl1bXQoqIFtQ\nYXRyb25dW10KKiBbRXZlbnRNYWNoaW5lXVtdCiogW0hUVFBDbGllbnRdW10K\nCkFkYXB0ZXJzIGFyZSBzbG93bHkgYmVpbmcgbW92ZWQgaW50byB0aGVpciBv\nd24gZ2Vtcywgb3IgYnVuZGxlZCB3aXRoIEhUVFAgY2xpZW50czoKCiogW1R5\ncGhvZXVzXVtdCgpJdCBhbHNvIGluY2x1ZGVzIGEgUmFjayBhZGFwdGVyIGZv\nciBoaXR0aW5nIGxvYWRlZCBSYWNrIGFwcGxpY2F0aW9ucyB0aHJvdWdoClJh\nY2s6OlRlc3QsIGFuZCBhIFRlc3QgYWRhcHRlciBmb3Igc3R1YmJpbmcgcmVx\ndWVzdHMgYnkgaGFuZC4KCiMjIEFQSSBkb2N1bWVudGF0aW9uCgpBdmFpbGFi\nbGUgYXQgW3J1Ynlkb2MuaW5mb10oaHR0cDovL3d3dy5ydWJ5ZG9jLmluZm8v\nZ2Vtcy9mYXJhZGF5KS4KCiMjIFVzYWdlCgojIyMgQmFzaWMgVXNlCgpgYGBy\ndWJ5CnJlc3BvbnNlID0gRmFyYWRheS5nZXQgJ2h0dHA6Ly9zdXNoaS5jb20v\nbmlnaXJpL3Nha2UuanNvbicKYGBgCkEgc2ltcGxlIGBnZXRgIHJlcXVlc3Qg\nY2FuIGJlIHBlcmZvcm1lZCBieSB1c2luZyB0aGUgc3ludGF4IGRlc2NyaWJl\nZCBhYm92ZS4gVGhpcyB3b3JrcyBpZiB5b3UgZG9uJ3QgbmVlZCB0byBzZXQg\ndXAgYW55dGhpbmc7IHlvdSBjYW4gcm9sbCB3aXRoIGp1c3QgdGhlIGRlZmF1\nbHQgbWlkZGxld2FyZQpzdGFjayBhbmQgZGVmYXVsdCBhZGFwdGVyIChzZWUg\nW0ZhcmFkYXk6OlJhY2tCdWlsZGVyI2luaXRpYWxpemVdKGh0dHBzOi8vZ2l0\naHViLmNvbS9sb3N0aXNsYW5kL2ZhcmFkYXkvYmxvYi9tYXN0ZXIvbGliL2Zh\ncmFkYXkvcmFja19idWlsZGVyLnJiKSkuCgpBIG1vcmUgZmxleGlibGUgd2F5\nIHRvIHVzZSBGYXJhZGF5IGlzIHRvIHN0YXJ0IHdpdGggYSBDb25uZWN0aW9u\nIG9iamVjdC4gSWYgeW91IHdhbnQgdG8ga2VlcCB0aGUgc2FtZSBkZWZhdWx0\ncywgeW91IGNhbiB1c2UgdGhpcyBzeW50YXg6CgpgYGBydWJ5CmNvbm4gPSBG\nYXJhZGF5Lm5ldyg6dXJsID0+ICdodHRwOi8vd3d3LmV4YW1wbGUuY29tJykK\ncmVzcG9uc2UgPSBjb25uLmdldCAnL3VzZXJzJyAgICAgICAgICAgICAgICAg\nIyBHRVQgaHR0cDovL3d3dy5leGFtcGxlLmNvbS91c2VycycKYGBgCgpDb25u\nZWN0aW9ucyBjYW4gYWxzbyB0YWtlIGFuIG9wdGlvbnMgaGFzaCBhcyBhIHBh\ncmFtZXRlciBvciBiZSBjb25maWd1cmVkIGJ5IHVzaW5nIGEgYmxvY2suIENo\nZWNrb3V0IHRoZSBzZWN0aW9uIGNhbGxlZCBbQWR2YW5jZWQgbWlkZGxld2Fy\nZSB1c2FnZV0oI2FkdmFuY2VkLW1pZGRsZXdhcmUtdXNhZ2UpIGZvciBtb3Jl\nIGRldGFpbHMgYWJvdXQgaG93IHRvIHVzZSB0aGlzIGJsb2NrIGZvciBjb25m\naWd1cmF0aW9ucy4KU2luY2UgdGhlIGRlZmF1bHQgbWlkZGxld2FyZSBzdGFj\nayB1c2VzIHVybFxfZW5jb2RlZCBtaWRkbGV3YXJlIGFuZCBkZWZhdWx0IGFk\nYXB0ZXIsIHVzZSB0aGVtIG9uIGJ1aWxkaW5nIHlvdXIgb3duIG1pZGRsZXdh\ncmUgc3RhY2suCgpgYGBydWJ5CmNvbm4gPSBGYXJhZGF5Lm5ldyg6dXJsID0+\nICdodHRwOi8vc3VzaGkuY29tJykgZG8gfGZhcmFkYXl8CiAgZmFyYWRheS5y\nZXF1ZXN0ICA6dXJsX2VuY29kZWQgICAgICAgICAgICAgIyBmb3JtLWVuY29k\nZSBQT1NUIHBhcmFtcwogIGZhcmFkYXkucmVzcG9uc2UgOmxvZ2dlciAgICAg\nICAgICAgICAgICAgICMgbG9nIHJlcXVlc3RzIHRvICRzdGRvdXQKICBmYXJh\nZGF5LmFkYXB0ZXIgIEZhcmFkYXkuZGVmYXVsdF9hZGFwdGVyICAjIG1ha2Ug\ncmVxdWVzdHMgd2l0aCBOZXQ6OkhUVFAKZW5kCgojIEZpbHRlciBzZW5zaXRp\ndmUgaW5mb3JtYXRpb24gZnJvbSBsb2dzIHdpdGggYSByZWdleCBtYXRjaGVy\nCgpjb25uID0gRmFyYWRheS5uZXcoOnVybCA9PiAnaHR0cDovL3N1c2hpLmNv\nbS9hcGlfa2V5PXMzY3IzdCcpIGRvIHxmYXJhZGF5fAogIGZhcmFkYXkucmVx\ndWVzdCAgOnVybF9lbmNvZGVkICAgICAgICAgICAgICMgZm9ybS1lbmNvZGUg\nUE9TVCBwYXJhbXMKICBmYXJhZGF5LnJlc3BvbnNlIDpsb2dnZXIgZG8gfCBs\nb2dnZXIgfAogICAgbG9nZ2VyLmZpbHRlcigvKGFwaV9rZXk9KShcdyspLywn\nXDFbUkVNT1ZFRF0nKQogIGVuZAogIGZhcmFkYXkuYWRhcHRlciAgRmFyYWRh\neS5kZWZhdWx0X2FkYXB0ZXIgICMgbWFrZSByZXF1ZXN0cyB3aXRoIE5ldDo6\nSFRUUAplbmQKYGBgCgpPbmNlIHlvdSBoYXZlIHRoZSBjb25uZWN0aW9uIG9i\namVjdCwgdXNlIGl0IHRvIG1ha2UgSFRUUCByZXF1ZXN0cy4gWW91IGNhbiBw\nYXNzIHBhcmFtZXRlcnMgdG8gaXQgaW4gYSBmZXcgZGlmZmVyZW50IHdheXM6\nCgpgYGBydWJ5CiMjIEdFVCAjIwoKcmVzcG9uc2UgPSBjb25uLmdldCAnL25p\nZ2lyaS9zYWtlLmpzb24nICAgICAjIEdFVCBodHRwOi8vc3VzaGkuY29tL25p\nZ2lyaS9zYWtlLmpzb24KcmVzcG9uc2UuYm9keQoKY29ubi5nZXQgJy9uaWdp\ncmknLCB7IDpuYW1lID0+ICdNYWd1cm8nIH0gICAjIEdFVCBodHRwOi8vc3Vz\naGkuY29tL25pZ2lyaT9uYW1lPU1hZ3VybwoKY29ubi5nZXQgZG8gfHJlcXwg\nICAgICAgICAgICAgICAgICAgICAgICAgICAjIEdFVCBodHRwOi8vc3VzaGku\nY29tL3NlYXJjaD9wYWdlPTImbGltaXQ9MTAwCiAgcmVxLnVybCAnL3NlYXJj\naCcsIDpwYWdlID0+IDIKICByZXEucGFyYW1zWydsaW1pdCddID0gMTAwCmVu\nZAoKIyMgUE9TVCAjIwoKY29ubi5wb3N0ICcvbmlnaXJpJywgeyA6bmFtZSA9\nPiAnTWFndXJvJyB9ICAjIFBPU1QgIm5hbWU9bWFndXJvIiB0byBodHRwOi8v\nc3VzaGkuY29tL25pZ2lyaQpgYGAKClNvbWUgY29uZmlndXJhdGlvbiBvcHRp\nb25zIGNhbiBiZSBhZGp1c3RlZCBwZXIgcmVxdWVzdDoKCmBgYHJ1YnkKIyBw\nb3N0IHBheWxvYWQgYXMgSlNPTiBpbnN0ZWFkIG9mICJ3d3ctZm9ybS11cmxl\nbmNvZGVkIiBlbmNvZGluZzoKY29ubi5wb3N0IGRvIHxyZXF8CiAgcmVxLnVy\nbCAnL25pZ2lyaScKICByZXEuaGVhZGVyc1snQ29udGVudC1UeXBlJ10gPSAn\nYXBwbGljYXRpb24vanNvbicKICByZXEuYm9keSA9ICd7ICJuYW1lIjogIlVu\nYWdpIiB9JwplbmQKCiMjIFBlci1yZXF1ZXN0IG9wdGlvbnMgIyMKCmNvbm4u\nZ2V0IGRvIHxyZXF8CiAgcmVxLnVybCAnL3NlYXJjaCcKICByZXEub3B0aW9u\ncy50aW1lb3V0ID0gNSAgICAgICAgICAgIyBvcGVuL3JlYWQgdGltZW91dCBp\nbiBzZWNvbmRzCiAgcmVxLm9wdGlvbnMub3Blbl90aW1lb3V0ID0gMiAgICAg\nICMgY29ubmVjdGlvbiBvcGVuIHRpbWVvdXQgaW4gc2Vjb25kcwplbmQKYGBg\nCgpBbmQgeW91IGNhbiBpbmplY3QgYXJiaXRyYXJ5IGRhdGEgaW50byB0aGUg\ncmVxdWVzdCB1c2luZyB0aGUgYGNvbnRleHRgIG9wdGlvbjoKCmBgYHJ1YnkK\nIyBBbnl0aGluZyB5b3UgaW5qZWN0IHVzaW5nIGNvbnRleHQgb3B0aW9uIHdp\nbGwgYmUgYXZhaWxhYmxlIGluIHRoZSBlbnYgb24gYWxsIG1pZGRsZXdhcmVz\nCgpjb25uLmdldCBkbyB8cmVxfAogIHJlcS51cmwgJy9zZWFyY2gnCiAgcmVx\nLm9wdGlvbnMuY29udGV4dCA9IHsKICAgICAgZm9vOiAnZm9vJywKICAgICAg\nYmFyOiAnYmFyJwogIH0KZW5kCmBgYAoKIyMjIENoYW5naW5nIGhvdyBwYXJh\nbWV0ZXJzIGFyZSBzZXJpYWxpemVkCgpTb21ldGltZXMgeW91IG5lZWQgdG8g\nc2VuZCB0aGUgc2FtZSBVUkwgcGFyYW1ldGVyIG11bHRpcGxlIHRpbWVzIHdp\ndGggZGlmZmVyZW50CnZhbHVlcy4gVGhpcyByZXF1aXJlcyBtYW51YWxseSBz\nZXR0aW5nIHRoZSBwYXJhbWV0ZXIgZW5jb2RlciBhbmQgY2FuIGJlIGRvbmUg\nb24KZWl0aGVyIHBlci1jb25uZWN0aW9uIG9yIHBlci1yZXF1ZXN0IGJhc2lz\nLgoKYGBgcnVieQojIHBlci1jb25uZWN0aW9uIHNldHRpbmcKY29ubiA9IEZh\ncmFkYXkubmV3IDpyZXF1ZXN0ID0+IHsgOnBhcmFtc19lbmNvZGVyID0+IEZh\ncmFkYXk6OkZsYXRQYXJhbXNFbmNvZGVyIH0KCmNvbm4uZ2V0IGRvIHxyZXF8\nCiAgIyBwZXItcmVxdWVzdCBzZXR0aW5nOgogICMgcmVxLm9wdGlvbnMucGFy\nYW1zX2VuY29kZXIgPSBteV9lbmNvZGVyCiAgcmVxLnBhcmFtc1sncm9sbCdd\nID0gWydjYWxpZm9ybmlhJywgJ3BoaWxhZGVscGhpYSddCmVuZAojIEdFVCAn\naHR0cDovL3N1c2hpLmNvbT9yb2xsPWNhbGlmb3JuaWEmcm9sbD1waGlsYWRl\nbHBoaWEnCmBgYAoKVGhlIHZhbHVlIG9mIEZhcmFkYXkgYHBhcmFtc19lbmNv\nZGVyYCBjYW4gYmUgYW55IG9iamVjdCB0aGF0IHJlc3BvbmRzIHRvOgoKKiBg\nZW5jb2RlKGhhc2gpICM9PiBTdHJpbmdgCiogYGRlY29kZShzdHJpbmcpICM9\nPiBIYXNoYAoKVGhlIGVuY29kZXIgd2lsbCBhZmZlY3QgYm90aCBob3cgcXVl\ncnkgc3RyaW5ncyBhcmUgcHJvY2Vzc2VkIGFuZCBob3cgUE9TVCBib2RpZXMK\nZ2V0IHNlcmlhbGl6ZWQuIFRoZSBkZWZhdWx0IGVuY29kZXIgaXMgRmFyYWRh\neTo6TmVzdGVkUGFyYW1zRW5jb2Rlci4KCiMjIEF1dGhlbnRpY2F0aW9uCgpC\nYXNpYyBhbmQgVG9rZW4gYXV0aGVudGljYXRpb24gYXJlIGhhbmRsZWQgYnkg\nRmFyYWRheTo6UmVxdWVzdDo6QmFzaWNBdXRoZW50aWNhdGlvbiBhbmQgRmFy\nYWRheTo6UmVxdWVzdDo6VG9rZW5BdXRoZW50aWNhdGlvbiByZXNwZWN0aXZl\nbHkuIFRoZXNlIGNhbiBiZSBhZGRlZCBhcyBtaWRkbGV3YXJlIG1hbnVhbGx5\nIG9yIHRocm91Z2ggdGhlIGhlbHBlciBtZXRob2RzLgoKYGBgcnVieQpGYXJh\nZGF5Lm5ldyguLi4pIGRvIHxjb25ufAogIGNvbm4uYmFzaWNfYXV0aCgndXNl\ncm5hbWUnLCAncGFzc3dvcmQnKQplbmQKCkZhcmFkYXkubmV3KC4uLikgZG8g\nfGNvbm58CiAgY29ubi50b2tlbl9hdXRoKCdhdXRoZW50aWNhdGlvbi10b2tl\nbicpCmVuZApgYGAKCiMjIFByb3h5CgpGYXJhZGF5IHdpbGwgdHJ5IHRvIGF1\ndG9tYXRpY2FsbHkgaW5mZXIgdGhlIHByb3h5IHNldHRpbmdzIGZyb20geW91\nciBzeXN0ZW0gdXNpbmcgYFVSSSNmaW5kX3Byb3h5YC4KVGhpcyB3aWxsIHJl\ndHJpZXZlIHRoZW0gZnJvbSBlbnZpcm9ubWVudCB2YXJpYWJsZXMgc3VjaCBh\ncyBodHRwX3Byb3h5LCBmdHBfcHJveHksIG5vX3Byb3h5LCBldGMuCklmIGZv\nciBhbnkgcmVhc29uIHlvdSB3YW50IHRvIGRpc2FibGUgdGhpcyBiZWhhdmlv\ndXIsIHlvdSBjYW4gZG8gc28gYnkgc2V0dGluZyB0aGUgZ2xvYmFsIHZhcmli\nYWxlIGBpZ25vcmVfZW52X3Byb3h5YDoKCmBgYHJ1YnkKRmFyYWRheS5pZ25v\ncmVfZW52X3Byb3h5ID0gdHJ1ZQpgYGAKCllvdSBjYW4gYWxzbyBzcGVjaWZ5\nIGEgY3VzdG9tIHByb3h5IHdoZW4gaW5pdGlhbGl6aW5nIHRoZSBjb25uZWN0\naW9uCgpgYGBydWJ5CkZhcmFkYXkubmV3KCdodHRwOi8vd3d3LmV4YW1wbGUu\nY29tJywgOnByb3h5ID0+ICdodHRwOi8vcHJveHkuY29tJykKYGBgCgojIyBB\nZHZhbmNlZCBtaWRkbGV3YXJlIHVzYWdlCgpUaGUgb3JkZXIgaW4gd2hpY2gg\nbWlkZGxld2FyZSBpcyBzdGFja2VkIGlzIGltcG9ydGFudC4gTGlrZSB3aXRo\nIFJhY2ssIHRoZQpmaXJzdCBtaWRkbGV3YXJlIG9uIHRoZSBsaXN0IHdyYXBz\nIGFsbCBvdGhlcnMsIHdoaWxlIHRoZSBsYXN0IG1pZGRsZXdhcmUgaXMgdGhl\nCmlubmVybW9zdCBvbmUsIHNvIHRoYXQgbXVzdCBiZSB0aGUgYWRhcHRlci4K\nCmBgYHJ1YnkKRmFyYWRheS5uZXcoLi4uKSBkbyB8Y29ubnwKICAjIFBPU1Qv\nUFVUIHBhcmFtcyBlbmNvZGVyczoKICBjb25uLnJlcXVlc3QgOm11bHRpcGFy\ndAogIGNvbm4ucmVxdWVzdCA6dXJsX2VuY29kZWQKICAKICAjIGFkZCBjdXN0\nb20gbWlkZGxld2FyZQogIGNvbm4udXNlIE15TWlkZGxld2FyZQoKICAjIExh\nc3QgbWlkZGxld2FyZSBtdXN0IGJlIHRoZSBhZGFwdGVyOgogIGNvbm4uYWRh\ncHRlciA6bmV0X2h0dHAKZW5kCmBgYAoKVGhpcyByZXF1ZXN0IG1pZGRsZXdh\ncmUgc2V0dXAgYWZmZWN0cyBQT1NUL1BVVCByZXF1ZXN0cyBpbiB0aGUgZm9s\nbG93aW5nIHdheToKCjEuIGBSZXF1ZXN0OjpNdWx0aXBhcnRgIGNoZWNrcyBm\nb3IgZmlsZXMgaW4gdGhlIHBheWxvYWQsIG90aGVyd2lzZSBsZWF2ZXMKICBl\ndmVyeXRoaW5nIHVudG91Y2hlZDsKMi4gYFJlcXVlc3Q6OlVybEVuY29kZWRg\nIGVuY29kZXMgYXMgImFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2Rl\nZCIgaWYgbm90CiAgYWxyZWFkeSBlbmNvZGVkIG9yIG9mIGFub3RoZXIgdHlw\nZQoKU3dhcHBpbmcgbWlkZGxld2FyZSBtZWFucyBnaXZpbmcgdGhlIG90aGVy\nIHByaW9yaXR5LiBTcGVjaWZ5aW5nIHRoZQoiQ29udGVudC1UeXBlIiBmb3Ig\ndGhlIHJlcXVlc3QgaXMgZXhwbGljaXRseSBzdGF0aW5nIHdoaWNoIG1pZGRs\nZXdhcmUgc2hvdWxkCnByb2Nlc3MgaXQuCgpFeGFtcGxlczoKCmBgYHJ1YnkK\nIyB1cGxvYWRpbmcgYSBmaWxlOgpwYXlsb2FkWzpwcm9maWxlX3BpY10gPSBG\nYXJhZGF5OjpVcGxvYWRJTy5uZXcoJy9wYXRoL3RvL2F2YXRhci5qcGcnLCAn\naW1hZ2UvanBlZycpCgojICJNdWx0aXBhcnQiIG1pZGRsZXdhcmUgZGV0ZWN0\ncyBmaWxlcyBhbmQgZW5jb2RlcyB3aXRoICJtdWx0aXBhcnQvZm9ybS1kYXRh\nIjoKY29ubi5wdXQgJy9wcm9maWxlJywgcGF5bG9hZApgYGAKCiMjIFdyaXRp\nbmcgbWlkZGxld2FyZQoKTWlkZGxld2FyZSBhcmUgY2xhc3NlcyB0aGF0IGlt\ncGxlbWVudCBhIGBjYWxsYCBpbnN0YW5jZSBtZXRob2QuIFRoZXkgaG9vayBp\nbnRvCnRoZSByZXF1ZXN0L3Jlc3BvbnNlIGN5Y2xlLgoKYGBgcnVieQpkZWYg\nY2FsbChyZXF1ZXN0X2VudikKICAjIGRvIHNvbWV0aGluZyB3aXRoIHRoZSBy\nZXF1ZXN0CiAgIyByZXF1ZXN0X2Vudls6cmVxdWVzdF9oZWFkZXJzXS5tZXJn\nZSEoLi4uKQoKICBAYXBwLmNhbGwocmVxdWVzdF9lbnYpLm9uX2NvbXBsZXRl\nIGRvIHxyZXNwb25zZV9lbnZ8CiAgICAjIGRvIHNvbWV0aGluZyB3aXRoIHRo\nZSByZXNwb25zZQogICAgIyByZXNwb25zZV9lbnZbOnJlc3BvbnNlX2hlYWRl\ncnNdLm1lcmdlISguLi4pCiAgZW5kCmVuZApgYGAKCkl0J3MgaW1wb3J0YW50\nIHRvIGRvIGFsbCBwcm9jZXNzaW5nIG9mIHRoZSByZXNwb25zZSBvbmx5IGlu\nIHRoZSBgb25fY29tcGxldGVgCmJsb2NrLiBUaGlzIGVuYWJsZXMgbWlkZGxl\nd2FyZSB0byB3b3JrIGluIHBhcmFsbGVsIG1vZGUgd2hlcmUgcmVxdWVzdHMg\nYXJlCmFzeW5jaHJvbm91cy4KClRoZSBgZW52YCBpcyBhIGhhc2ggd2l0aCBz\neW1ib2wga2V5cyB0aGF0IGNvbnRhaW5zIGluZm8gYWJvdXQgdGhlIHJlcXVl\nc3QgYW5kLApsYXRlciwgcmVzcG9uc2UuIFNvbWUga2V5cyBhcmU6CgpgYGAK\nIyByZXF1ZXN0IHBoYXNlCjptZXRob2QgLSA6Z2V0LCA6cG9zdCwgLi4uCjp1\ncmwgICAgLSBVUkkgZm9yIHRoZSBjdXJyZW50IHJlcXVlc3Q7IGFsc28gY29u\ndGFpbnMgR0VUIHBhcmFtZXRlcnMKOmJvZHkgICAtIFBPU1QgcGFyYW1ldGVy\ncyBmb3IgOnBvc3QvOnB1dCByZXF1ZXN0cwo6cmVxdWVzdF9oZWFkZXJzCgoj\nIHJlc3BvbnNlIHBoYXNlCjpzdGF0dXMgLSBIVFRQIHJlc3BvbnNlIHN0YXR1\ncyBjb2RlLCBzdWNoIGFzIDIwMAo6Ym9keSAgIC0gdGhlIHJlc3BvbnNlIGJv\nZHkKOnJlc3BvbnNlX2hlYWRlcnMKYGBgCgojIyBBZC1ob2MgYWRhcHRlcnMg\nY3VzdG9taXphdGlvbgoKRmFyYWRheSBpcyBpbnRlbmRlZCB0byBiZSBhIGdl\nbmVyaWMgaW50ZXJmYWNlIGJldHdlZW4geW91ciBjb2RlIGFuZCB0aGUgYWRh\ncHRlci4gSG93ZXZlciwgc29tZXRpbWVzIHlvdSBuZWVkIHRvIGFjY2VzcyBh\nIGZlYXR1cmUgc3BlY2lmaWMgdG8gb25lIG9mIHRoZSBhZGFwdGVycyB0aGF0\nIGlzIG5vdCBjb3ZlcmVkIGluIEZhcmFkYXkncyBpbnRlcmZhY2UuCgpXaGVu\nIHRoYXQgaGFwcGVucywgeW91IGNhbiBwYXNzIGEgYmxvY2sgd2hlbiBzcGVj\naWZ5aW5nIHRoZSBhZGFwdGVyIHRvIGN1c3RvbWl6ZSBpdC4gVGhlIGJsb2Nr\nIHBhcmFtZXRlciB3aWxsIGNoYW5nZSBiYXNlZCBvbiB0aGUgYWRhcHRlciB5\nb3UncmUgdXNpbmcuIFNlZSBiZWxvdyBmb3Igc29tZSBleGFtcGxlcy4KCiMj\nIyBOZXRIdHRwCmBgYHJ1YnkKY29ubiA9IEZhcmFkYXkubmV3KC4uLikgZG8g\nfGZ8CiAgZi5hZGFwdGVyIDpuZXRfaHR0cCBkbyB8aHR0cHwgIyB5aWVsZHMg\nTmV0OjpIVFRQCiAgICBodHRwLmlkbGVfdGltZW91dCA9IDEwMAogICAgaHR0\ncC52ZXJpZnlfY2FsbGJhY2sgPSBsYW1iZGEgZG8gfCBwcmV2ZXJpZnlfb2ss\nIGNlcnRfc3RvcmUgfAogICAgICAjIGRvIHNvbWV0aGluZyBoZXJlLi4uCiAg\nICBlbmQKICBlbmQKZW5kCmBgYAoKIyMjIE5ldEh0dHBQZXJzaXN0ZW50CmBg\nYHJ1YnkKY29ubiA9IEZhcmFkYXkubmV3KC4uLikgZG8gfGZ8CiAgZi5hZGFw\ndGVyIDpuZXRfaHR0cF9wZXJzaXN0ZW50LCBwb29sX3NpemU6IDUgZG8gfGh0\ndHB8ICMgeWllbGRzIE5ldDo6SFRUUDo6UGVyc2lzdGVudAogICAgaHR0cC5p\nZGxlX3RpbWVvdXQgPSAxMDAKICAgIGh0dHAucmV0cnlfY2hhbmdlX3JlcXVl\nc3RzID0gdHJ1ZQogIGVuZAplbmQKYGBgCgojIyMgUGF0cm9uCmBgYHJ1YnkK\nY29ubiA9IEZhcmFkYXkubmV3KC4uLikgZG8gfGZ8CiAgZi5hZGFwdGVyIDpw\nYXRyb24gZG8gfHNlc3Npb258ICMgeWllbGRzIFBhdHJvbjo6U2Vzc2lvbgog\nICAgc2Vzc2lvbi5tYXhfcmVkaXJlY3RzID0gMTAKICBlbmQKZW5kCmBgYAoK\nIyMjIEhUVFBDbGllbnQKYGBgcnVieQpjb25uID0gRmFyYWRheS5uZXcoLi4u\nKSBkbyB8ZnwKICBmLmFkYXB0ZXIgOmh0dHBjbGllbnQgZG8gfGNsaWVudHwg\nIyB5aWVsZHMgSFRUUENsaWVudAogICAgY2xpZW50LmtlZXBfYWxpdmVfdGlt\nZW91dCA9IDIwCiAgICBjbGllbnQuc3NsX2NvbmZpZy50aW1lb3V0ID0gMjUK\nICBlbmQKZW5kCmBgYAoKIyMgVXNpbmcgRmFyYWRheSBmb3IgdGVzdGluZwoK\nYGBgcnVieQojIEl0J3MgcG9zc2libGUgdG8gZGVmaW5lIHN0dWJiZWQgcmVx\ndWVzdCBvdXRzaWRlIGEgdGVzdCBhZGFwdGVyIGJsb2NrLgpzdHVicyA9IEZh\ncmFkYXk6OkFkYXB0ZXI6OlRlc3Q6OlN0dWJzLm5ldyBkbyB8c3R1YnwKICBz\ndHViLmdldCgnL3RhbWFnbycpIHsgfGVudnwgWzIwMCwge30sICdlZ2cnXSB9\nCmVuZAoKIyBZb3UgY2FuIHBhc3Mgc3R1YmJlZCByZXF1ZXN0IHRvIHRoZSB0\nZXN0IGFkYXB0ZXIgb3IgZGVmaW5lIHRoZW0gaW4gYSBibG9jawojIG9yIGEg\nY29tYmluYXRpb24gb2YgdGhlIHR3by4KdGVzdCA9IEZhcmFkYXkubmV3IGRv\nIHxidWlsZGVyfAogIGJ1aWxkZXIuYWRhcHRlciA6dGVzdCwgc3R1YnMgZG8g\nfHN0dWJ8CiAgICBzdHViLmdldCgnL2ViaScpIHsgfGVudnwgWyAyMDAsIHt9\nLCAnc2hyaW1wJyBdfQogIGVuZAplbmQKCiMgSXQncyBhbHNvIHBvc3NpYmxl\nIHRvIHN0dWIgYWRkaXRpb25hbCByZXF1ZXN0cyBhZnRlciB0aGUgY29ubmVj\ndGlvbiBoYXMKIyBiZWVuIGluaXRpYWxpemVkLiBUaGlzIGlzIHVzZWZ1bCBm\nb3IgdGVzdGluZy4Kc3R1YnMuZ2V0KCcvdW5pJykgeyB8ZW52fCBbIDIwMCwg\ne30sICd1cmNoaW4nIF19CgpyZXNwID0gdGVzdC5nZXQgJy90YW1hZ28nCnJl\nc3AuYm9keSAjID0+ICdlZ2cnCnJlc3AgPSB0ZXN0LmdldCAnL2ViaScKcmVz\ncC5ib2R5ICMgPT4gJ3NocmltcCcKcmVzcCA9IHRlc3QuZ2V0ICcvdW5pJwpy\nZXNwLmJvZHkgIyA9PiAndXJjaGluJwpyZXNwID0gdGVzdC5nZXQgJy9lbHNl\nJyAjPT4gcmFpc2VzICJubyBzdWNoIHN0dWIiIGVycm9yCgojIElmIHlvdSBs\naWtlLCB5b3UgY2FuIHRyZWF0IHlvdXIgc3R1YnMgYXMgbW9ja3MgYnkgdmVy\naWZ5aW5nIHRoYXQgYWxsIG9mCiMgdGhlIHN0dWJiZWQgY2FsbHMgd2VyZSBt\nYWRlLiBOT1RFIHRoYXQgdGhpcyBmZWF0dXJlIGlzIHN0aWxsIGZhaXJseQoj\nIGV4cGVyaW1lbnRhbDogSXQgd2lsbCBub3QgdmVyaWZ5IHRoZSBvcmRlciBv\nciBjb3VudCBvZiBhbnkgc3R1Yiwgb25seSB0aGF0CiMgaXQgd2FzIGNhbGxl\nZCBvbmNlIGR1cmluZyB0aGUgY291cnNlIG9mIHRoZSB0ZXN0LgpzdHVicy52\nZXJpZnlfc3R1YmJlZF9jYWxscwpgYGAKCiMjIFN1cHBvcnRlZCBSdWJ5IHZl\ncnNpb25zCgpUaGlzIGxpYnJhcnkgYWltcyB0byBzdXBwb3J0IGFuZCBpcyBb\ndGVzdGVkIGFnYWluc3RdW3RyYXZpc10gdGhlIGZvbGxvd2luZyBSdWJ5Cmlt\ncGxlbWVudGF0aW9uczoKCiogUnVieSAxLjkuMysKKiBbSlJ1YnldW10gMS43\nKwoqIFtSdWJpbml1c11bXSAyKwoKSWYgc29tZXRoaW5nIGRvZXNuJ3Qgd29y\nayBvbiBvbmUgb2YgdGhlc2UgUnVieSB2ZXJzaW9ucywgaXQncyBhIGJ1Zy4K\nClRoaXMgbGlicmFyeSBtYXkgaW5hZHZlcnRlbnRseSB3b3JrIChvciBzZWVt\nIHRvIHdvcmspIG9uIG90aGVyIFJ1YnkKaW1wbGVtZW50YXRpb25zLCBob3dl\ndmVyIHN1cHBvcnQgd2lsbCBvbmx5IGJlIHByb3ZpZGVkIGZvciB0aGUgdmVy\nc2lvbnMgbGlzdGVkCmFib3ZlLgoKSWYgeW91IHdvdWxkIGxpa2UgdGhpcyBs\naWJyYXJ5IHRvIHN1cHBvcnQgYW5vdGhlciBSdWJ5IHZlcnNpb24sIHlvdSBt\nYXkKdm9sdW50ZWVyIHRvIGJlIGEgbWFpbnRhaW5lci4gQmVpbmcgYSBtYWlu\ndGFpbmVyIGVudGFpbHMgbWFraW5nIHN1cmUgYWxsIHRlc3RzCnJ1biBhbmQg\ncGFzcyBvbiB0aGF0IGltcGxlbWVudGF0aW9uLiBXaGVuIHNvbWV0aGluZyBi\ncmVha3Mgb24geW91cgppbXBsZW1lbnRhdGlvbiwgeW91IHdpbGwgYmUgcmVz\ncG9uc2libGUgZm9yIHByb3ZpZGluZyBwYXRjaGVzIGluIGEgdGltZWx5CmZh\nc2hpb24uIElmIGNyaXRpY2FsIGlzc3VlcyBmb3IgYSBwYXJ0aWN1bGFyIGlt\ncGxlbWVudGF0aW9uIGV4aXN0IGF0IHRoZSB0aW1lCm9mIGEgbWFqb3IgcmVs\nZWFzZSwgc3VwcG9ydCBmb3IgdGhhdCBSdWJ5IHZlcnNpb24gbWF5IGJlIGRy\nb3BwZWQuCgojIyBDb250cmlidXRlCgpEbyB5b3Ugd2FudCB0byBjb250cmli\ndXRlIHRvIEZhcmFkYXk/Ck9wZW4gdGhlIGlzc3VlcyBwYWdlIGFuZCBjaGVj\nayBmb3IgdGhlIGBoZWxwIHdhbnRlZGAgbGFiZWwhCkJ1dCBiZWZvcmUgeW91\nIHN0YXJ0IGNvZGluZywgcGxlYXNlIHJlYWQgb3VyIFtDb250cmlidXRpbmcg\nR3VpZGVdKGh0dHBzOi8vZ2l0aHViLmNvbS9sb3N0aXNsYW5kL2ZhcmFkYXkv\nYmxvYi9tYXN0ZXIvLmdpdGh1Yi9DT05UUklCVVRJTkcubWQpCgojIyBDb3B5\ncmlnaHQKCkNvcHlyaWdodCAoYykgMjAwOS0yMDE3IFtSaWNrIE9sc29uXSht\nYWlsdG86dGVjaG5vd2VlbmllQGdtYWlsLmNvbSksIFphY2sgSG9ic29uLgpT\nZWUgW0xJQ0VOU0VdW10gZm9yIGRldGFpbHMuCgpbbmV0X2h0dHBdOiAgICAg\naHR0cDovL3J1YnktZG9jLm9yZy9zdGRsaWIvbGliZG9jL25ldC9odHRwL3Jk\nb2MvTmV0L0hUVFAuaHRtbApbcGVyc2lzdGVudF06ICAgaHR0cHM6Ly9naXRo\ndWIuY29tL2RyYnJhaW4vbmV0LWh0dHAtcGVyc2lzdGVudApbdHJhdmlzXTog\nICAgICAgaHR0cHM6Ly90cmF2aXMtY2kub3JnL2xvc3Rpc2xhbmQvZmFyYWRh\neQpbZXhjb25dOiAgICAgICAgaHR0cHM6Ly9naXRodWIuY29tL2V4Y29uL2V4\nY29uI3JlYWRtZQpbcGF0cm9uXTogICAgICAgaHR0cDovL3RvbGFuZC5naXRo\ndWIuaW8vcGF0cm9uLwpbZXZlbnRtYWNoaW5lXTogaHR0cHM6Ly9naXRodWIu\nY29tL2lncmlnb3Jpay9lbS1odHRwLXJlcXVlc3QjcmVhZG1lCltodHRwY2xp\nZW50XTogICBodHRwczovL2dpdGh1Yi5jb20vbmFoaS9odHRwY2xpZW50Clt0\neXBob2V1c106ICAgICBodHRwczovL2dpdGh1Yi5jb20vdHlwaG9ldXMvdHlw\naG9ldXMvYmxvYi9tYXN0ZXIvbGliL3R5cGhvZXVzL2FkYXB0ZXJzL2ZhcmFk\nYXkucmIKW2pydWJ5XTogICAgICAgIGh0dHA6Ly9qcnVieS5vcmcvCltydWJp\nbml1c106ICAgICBodHRwOi8vcnViaW5pLnVzLwpbbGljZW5zZV06ICAgICAg\nTElDRU5TRS5tZAo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/lostisland/faraday/contents/README.md?ref=master","git":"https://api.github.com/repos/lostisland/faraday/git/blobs/8a273d06247130ad99b2f6df172c8feb78761bb3","html":"https://github.com/lostisland/faraday/blob/master/README.md"}}'
+    http_version: 
+  recorded_at: Sat, 09 Feb 2019 09:35:36 GMT
+recorded_with: VCR 4.0.0

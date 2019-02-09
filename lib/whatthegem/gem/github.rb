@@ -1,6 +1,9 @@
 module WhatTheGem
   class Gem
     class GitHub
+      CHANGELOG_PATTERN = /^(history|changelog|changes)(\.\w+)?$/i
+      Path = Struct.new(:basename, :read)
+
       class << self
         memoize def octokit
           if (token = ENV['GITHUB_ACCESS_TOKEN'])
@@ -10,8 +13,6 @@ module WhatTheGem
           end
         end
       end
-
-      CHANGELOG_PATTERN = /^(history|changelog|changes)(\.\w+)?$/i
 
       attr_reader :repo_id
 
@@ -58,18 +59,31 @@ module WhatTheGem
       private
 
       def locate_file(pattern)
-        files.detect { |f| f.name.match?(pattern) }
-          &.then { |f| contents(f.path) }
-          &.then(&method(:decode_content))
+        files.detect { |f| f.fetch(:name).match?(pattern) }
+          &.fetch(:path)
+          &.then { |path|
+            Path.new(path, contents(path).then(&method(:decode_content)))
+          }
       end
 
       def req(method, *args)
-        octokit.public_send(method, repo_id, *args)
+        octokit.public_send(method, repo_id, *args).then(&method(:sawyer_to_hashes))
+      end
+
+      def sawyer_to_hashes(val)
+        case
+        when val.respond_to?(:to_hash)
+          val.to_hash.transform_values(&method(:sawyer_to_hashes))
+        when val.respond_to?(:to_ary)
+          val.to_ary.map(&method(:sawyer_to_hashes))
+        else
+          val
+        end
       end
 
       def decode_content(obj)
         # TODO: encoding is specified as a part of the answer, could it be other than base64?
-        obj.merge(text: Base64.decode64(obj.fetch(:content)).force_encoding('UTF-8'))
+        Base64.decode64(obj.fetch(:content)).force_encoding('UTF-8')
       end
 
       def octokit
