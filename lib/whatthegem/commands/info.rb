@@ -13,22 +13,11 @@ module WhatTheGem
       {{info.info | paragraphs:1 }}
 
       Latest version: {{info.version}}
-
-      ## Global
-
       Installed versions: {% if specs %}{{ specs | map:"version" | join: ", "}}{% else %}—{% endif %}
       {% if current %}Most recent installed at: {{current.dir}}{% endif %}
-      {% unless bundled.type == 'nobundle' %}
-      ## Bundle
-
-      {% if bundled.type == 'notbundled' %}Not in a bundle{% else
-      %}Bundled version: {{ bundled.version }} at {{ bundled.dir }}{% endif %}
-      {% endunless %}
+      {% unless bundled.type == 'nobundle' %}In your bundle: {% if bundled.type == 'notbundled' %}—{% else
+      %}{{ bundled.version }} at {{ bundled.dir }}{% endif %}{% endunless %}
     INFO
-
-    def call
-      locals.then(&TEMPLATE).tap(&method(:puts))
-    end
 
     def locals
       {
@@ -55,8 +44,9 @@ module WhatTheGem
     def guess_uris(info)
       [
         info[:source_code_uri],
-        info.values_at(:homepage_uri, :documentation_uri, :project_uri).first
-      ].compact.uniq { |u| u.chomp('/') }
+        info.values_at(:homepage_uri, :documentation_uri, :project_uri).compact.reject(&:empty?).first
+      ]
+      .compact.uniq { |u| u.chomp('/') }
     end
   end
 end

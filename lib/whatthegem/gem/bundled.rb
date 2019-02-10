@@ -7,11 +7,19 @@ module WhatTheGem
         def to_h
           {type: 'nobundle'}
         end
+
+        def present?
+          false
+        end
       end
 
       NotBundled = Struct.new(:name) do
         def to_h
           {type: 'notbundled', name: name}
+        end
+
+        def present?
+          false
         end
       end
 
@@ -28,6 +36,10 @@ module WhatTheGem
 
       def initialize(spec)
         @spec = spec
+      end
+
+      def present?
+        true
       end
 
       def to_h

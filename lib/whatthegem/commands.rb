@@ -23,6 +23,10 @@ module WhatTheGem
     def initialize(gem)
       @gem = gem
     end
+
+    def call
+      locals.then(&self.class::TEMPLATE).tap(&method(:puts))
+    end
   end
 end
 

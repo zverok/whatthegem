@@ -8,6 +8,10 @@ module WhatTheGem
       def initialize(number:, header:, body:)
         super(number: ::Gem::Version.new(number), header: header, body: body)
       end
+
+      def to_h
+        super.merge(number: number.to_s)
+      end
     end
 
     VERSION_REGEXP = /^(?:v(?:er(?:sion)?)? ?)?(\d+\.\d+(\.\d+)?)(\s|$)/i

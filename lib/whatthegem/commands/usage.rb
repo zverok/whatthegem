@@ -15,10 +15,6 @@ module WhatTheGem
       {{ usage | nfirst:2 | join:"\n\n" }}
     USAGE
 
-    def call
-      locals.then(&TEMPLATE).tap(&method(:puts))
-    end
-
     def locals
       {
         usage: readme.then(&UsageExtractor.method(:new)).call
