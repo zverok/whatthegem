@@ -90,12 +90,18 @@ module WhatTheGem
     end
 
     def best_changelog(*changelogs)
-      changelogs.compact.reject(&:empty?)
-        .tap { |list| return list.first if list.size < 2 }
-        .tap { |list|
-          next if list.map { |*, last| last.number }.uniq.one?
-          return list.max_by { |*, last| last.number}
-        }.max_by { |*, last| last.body.size }
+      # in case they have both (releases & CHANGELOG.md)...
+      list = changelogs.compact.reject(&:empty?)
+      return list.first if list.size < 2
+
+      # Some gems have "old" changelog in file, and new in releases, or vice versa
+      if list.map { |*, last| last.number }.uniq.one?
+        # If both have the same latest version, return one having more text
+        list.max_by { |*, last| last.body.size }
+      else
+        # Return newer, if one of them are
+        list.max_by { |*, last| last.number }
+      end
     end
   end
 end

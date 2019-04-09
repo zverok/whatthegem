@@ -13,7 +13,8 @@ module WhatTheGem
           when /\.(md|markdown)$/i
             MarkdownParser.new(file)
           else
-            fail ArgumentError, "Don't know how to parse #{file.basename}"
+            # Most of the time in Ruby-land, when no extension it is RDoc or RDoc-alike
+            RDocParser.new(file)
           end
         end
       end
@@ -38,3 +39,4 @@ module WhatTheGem
 end
 
 require_relative 'markdown_parser'
+require_relative 'rdoc_parser'

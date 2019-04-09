@@ -24,11 +24,15 @@ RSpec.describe WhatTheGem::Changes::Parser do
 
   let(:fixtures) { Pathname.new('spec/fixtures/changelogs') }
 
+  # Markdown
   include_examples 'parses successfully', 'rubocop'
   include_examples 'parses successfully', 'faker'
   include_examples 'parses successfully', 'rouge'
   include_examples 'parses changelog', 'tzinfo', versions: %w[2.0.0 1.2.5 1.2.4 1.2.3]
   include_examples 'parses changelog', 'vcr', versions: %w[4.0.0 3.0.3 3.0.2]
+
+  # RDoc
+  include_examples 'parses successfully', 'sequel'
 
   # More examples:
   # sinatra

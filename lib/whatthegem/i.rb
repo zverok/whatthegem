@@ -33,6 +33,11 @@ module WhatTheGem
       def parts(source)
         RDoc::Comment.new(source).parse.parts
       end
+
+      def part2md(part)
+        formatter = RDoc::Markup::ToMarkdown.new
+        RDoc::Markup::Document.new(part).accept(formatter)
+      end
     end
   end
 end
