@@ -6,7 +6,11 @@ module WhatTheGem
   class Gem
     GITHUB_URI_PATTERN = %r{^https?://(www\.)?github\.com/}
 
-    NoGem = Struct.new(:name)
+    NoGem = Struct.new(:name) do
+      def exists?
+        false
+      end
+    end
 
     def self.fetch(name)
       # Empty hash in rubygems info means it does not exist.
@@ -18,6 +22,10 @@ module WhatTheGem
 
     def initialize(name)
       @name = name
+    end
+
+    def exists?
+      true
     end
 
     memoize def rubygems

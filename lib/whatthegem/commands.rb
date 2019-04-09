@@ -25,7 +25,17 @@ module WhatTheGem
     end
 
     def call
-      locals.then(&self.class::TEMPLATE).tap(&method(:puts))
+      puts output
+    end
+
+    private
+
+    def output
+      gem.exists? ? locals.then(&template) : %{Gem "#{gem.name}" is not registered at rubygems.org.}
+    end
+
+    def template
+      self.class::TEMPLATE
     end
   end
 end

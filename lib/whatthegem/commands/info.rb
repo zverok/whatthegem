@@ -46,7 +46,7 @@ module WhatTheGem
         info[:source_code_uri],
         info.values_at(:homepage_uri, :documentation_uri, :project_uri).compact.reject(&:empty?).first
       ]
-      .compact.uniq { |u| u.chomp('/') }
+      .compact.reject(&:empty?).uniq { |u| u.chomp('/').sub('http:', 'https:') }
     end
   end
 end
