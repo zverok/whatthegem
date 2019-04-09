@@ -5,8 +5,8 @@ require 'rdoc'
 module WhatTheGem
   # TODO:
   # more robustly ignore "installation" section or just remove gem 'foo' / gem install
-  # -> select only ```ruby section from markdown?
-  # -> more removal patterns?
+  # -> select only ```ruby section from markdown (if they exist)?
+  # -> more removal patterns? Like `rake something`
   #
   class UsageExtractor
     REMOVE_BLOCKS = [
@@ -18,7 +18,9 @@ module WhatTheGem
       'git clone',      # instructions to contribute
 
       '\\$',            # bash command
-      'ruby (\S+)$'     # run one Ruby command
+      'ruby (\S+)$',    # run one Ruby command
+
+      'Copyright '      # Sometimes they render license in ```
     ]
 
     REMOVE_BLOCKS_RE = /^#{REMOVE_BLOCKS.join('|')}/
