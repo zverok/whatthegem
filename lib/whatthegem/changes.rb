@@ -1,8 +1,18 @@
-require_relative '../changelog_parser'
-
 module WhatTheGem
   class Changes < Command
     register 'changes'
+
+    VERSION_REGEXP = /^(?:v(?:er(?:sion)?)? ?)?(\d+\.\d+(\.\d+(\.\w+)?)?)(\s|$)/i
+
+    class Version < Struct.new(:number, :header, :body, keyword_init: true)
+      def initialize(number:, header:, body:)
+        super(number: ::Gem::Version.new(number), header: header, body: body)
+      end
+
+      def to_h
+        super.merge(number: number.to_s)
+      end
+    end
 
     BundledSince = Struct.new(:version) do
       def to_h
@@ -67,9 +77,19 @@ module WhatTheGem
     end
 
     memoize def versions
-      gem.github # always take the freshest from GitHub, even when installed locally
-        &.changelog
-        &.then(&ChangelogParser.method(:call))
+      versions_from_releases.then.reject(&:empty?).first || versions_from_file
+    end
+
+    def versions_from_releases
+      gem.github&.releases&.then(&ReleasesParser)
+    end
+
+    def versions_from_file
+      # always take the freshest from GitHub, even when installed locally
+      gem.github&.changelog&.then(&Parser)
     end
   end
 end
+
+require_relative 'changes/parser'
+require_relative 'changes/releases_parser'

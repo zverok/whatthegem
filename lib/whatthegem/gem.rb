@@ -42,8 +42,11 @@ module WhatTheGem
 
     # FIXME: active_record's actual path is https://github.com/rails/rails/tree/v5.2.1/activerecord
     def detect_repo_id(urls)
-      repo_url = urls.grep(GITHUB_URI_PATTERN).first or return nil
-      Octokit::Repository.from_url(repo_url).slug
+      # Octokit can't correctly guess repo slug from https://github.com/bitaxis/annotate_models.git
+      urls.grep(GITHUB_URI_PATTERN).first
+          &.sub(/\.git$/, '')
+          &.then(&Octokit::Repository.method(:from_url))
+          &.slug
     end
   end
 end

@@ -1,5 +1,3 @@
-require 'kramdown'
-require 'kramdown-parser-gfm'
 require 'rdoc'
 
 module WhatTheGem
@@ -30,8 +28,7 @@ module WhatTheGem
     end
 
     def call
-      code_blocks(file.read)
-        .grep_v(REMOVE_BLOCKS_RE)
+      code_blocks(file.read).grep_v(REMOVE_BLOCKS_RE)
     end
 
     private
@@ -52,15 +49,13 @@ module WhatTheGem
     end
 
     def markdown_code_blocks(content)
-      Kramdown::Document.new(content, input: 'GFM')
-        .root.children.select { |c| c.type == :codeblock }
+      I::Kramdowns.elements(content)
+        .select { |c| c.type == :codeblock }
         .map(&:value).map(&:strip)
     end
 
     def rdoc_code_blocks(content)
-      RDoc::Comment.new(content).parse
-        .parts.grep(RDoc::Markup::Verbatim)
-        .map(&:text)
+      I::RDocs.parts(content).grep(RDoc::Markup::Verbatim).map(&:text)
     end
   end
 end

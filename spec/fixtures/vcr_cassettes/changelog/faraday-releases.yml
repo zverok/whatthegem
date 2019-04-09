@@ -1,0 +1,315 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/faraday.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Gems 1.1.1
+      - Ruby
+      Authorization:
+      - 6afb342e528a1f624b7bac0da9cb9a1d
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'self'; script-src 'self' https://secure.gaug.es https://www.fastly-insights.com;
+        style-src 'self' https://fonts.googleapis.com; img-src 'self' https://secure.gaug.es
+        https://gravatar.com https://secure.gravatar.com https://*.fastly-insights.com;
+        font-src 'self' https://fonts.gstatic.com; connect-src https://s3-us-west-2.amazonaws.com/rubygems-dumps/
+        https://*.fastly-insights.com https://api.github.com;
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - de8b002a-855f-428e-ad8c-4b9e35663dc1
+      X-Runtime:
+      - '0.016660'
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      X-Backend:
+      - F_Rails 54.186.104.15:443
+      Accept-Ranges:
+      - bytes
+      - bytes
+      Age:
+      - '0'
+      - '0'
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 09 Apr 2019 15:09:28 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-hhn1526-HHN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1554822569.566138,VS0,VE187
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"fb70c1a7a2decdb5a388e16981cae17b"'
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"faraday","downloads":142649283,"version":"0.15.4","version_downloads":10701429,"platform":"ruby","authors":"Rick
+        Olson","info":"HTTP/REST API client library.","licenses":["MIT"],"metadata":{},"yanked":false,"sha":"00e6ffd6f1bccd9dc9e3b993a0004e69680559422206ce4cbb81fd2d0ba8e268","project_uri":"https://rubygems.org/gems/faraday","gem_uri":"https://rubygems.org/gems/faraday-0.15.4.gem","homepage_uri":"https://github.com/lostisland/faraday","wiki_uri":null,"documentation_uri":"http://www.rubydoc.info/gems/faraday/0.15.4","mailing_list_uri":null,"source_code_uri":null,"bug_tracker_uri":null,"changelog_uri":null,"dependencies":{"development":[],"runtime":[{"name":"multipart-post","requirements":"\u003c
+        3, \u003e= 1.2"}]}}'
+    http_version: 
+  recorded_at: Tue, 09 Apr 2019 15:09:28 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/lostisland/faraday/releases
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.13.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 09 Apr 2019 15:09:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '54'
+      X-Ratelimit-Reset:
+      - '1554826169'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      Etag:
+      - W/"b602dbf20356b9dcb6239e7a4eb7155f"
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - 97B2:5284:5A3B31:B2931D:5CACB5A9
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"url":"https://api.github.com/repos/lostisland/faraday/releases/14204111","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/14204111/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/14204111/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.15.4","id":14204111,"node_id":"MDc6UmVsZWFzZTE0MjA0MTEx","tag_name":"v0.15.4","target_commitish":"master","name":"Faraday
+        0.15.4","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2018-11-27T10:55:37Z","published_at":"2018-11-27T10:56:23Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.15.4","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.15.4","body":"*
+        Expose `pool_size` as a option for the NetHttpPersistent adapter (#834)"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/12983102","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/12983102/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/12983102/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.15.3","id":12983102,"node_id":"MDc6UmVsZWFzZTEyOTgzMTAy","tag_name":"v0.15.3","target_commitish":"master","name":"Faraday
+        0.15.3","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2018-09-19T15:10:22Z","published_at":"2018-09-19T15:25:24Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.15.3","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.15.3","body":"*
+        Make Faraday::Request serialisable with Marshal. (#803)\r\n* Add DEFAULT_EXCEPTIONS
+        constant to Request::Retry (#814)\r\n* Add support for Ruby 2.6 Net::HTTP
+        write_timeout (#824)"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/11138905","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/11138905/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/11138905/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.15.2","id":11138905,"node_id":"MDc6UmVsZWFzZTExMTM4OTA1","tag_name":"v0.15.2","target_commitish":"master","name":"Faraday
+        0.15.2","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2018-05-23T15:15:54Z","published_at":"2018-05-23T15:38:12Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.15.2","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.15.2","body":"*
+        Prevents `Net::HTTP` adapters to retry request internally by setting `max_retries`
+        to 0 if available (Ruby 2.5+). (#799)\r\n* Fixes `NestedParamsEncoder` handling
+        of empty array values (#801)"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/10942685","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/10942685/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/10942685/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.15.1","id":10942685,"node_id":"MDc6UmVsZWFzZTEwOTQyNjg1","tag_name":"v0.15.1","target_commitish":"master","name":"Faraday
+        0.15.1","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2018-05-10T15:35:29Z","published_at":"2018-05-10T15:37:30Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.15.1","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.15.1","body":"*
+        NetHttpPersistent adapter better reuse of SSL connections (#793)\r\n* Refactor:
+        inline cached_connection (#797)\r\n* Logger middleware: use $stdout instead
+        of STDOUT (#794)\r\n* Fix: do not memoize/reuse Patron session (#796)\r\n\r\nAlso
+        in this release:\r\n\r\n* Allow setting min/max ssl version for Net::HTTP
+        (#792)\r\n* Allow setting min/max ssl version for Excon (#795)"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/10623754","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/10623754/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/10623754/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.15.0","id":10623754,"node_id":"MDc6UmVsZWFzZTEwNjIzNzU0","tag_name":"v0.15.0","target_commitish":"master","name":"Faraday
+        0.15.0","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2018-04-19T13:06:45Z","published_at":"2018-04-19T13:07:57Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.15.0","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.15.0","body":"Features:\r\n\r\n*
+        Added retry block option to retry middleware. (#770)\r\n* Retry middleware
+        improvements (honour Retry-After header, retry statuses) (#773)\r\n* Improve
+        response logger middleware output (#784)\r\n\r\nFixes:\r\n\r\n* Remove unused
+        class error (#767)\r\n* Fix minor typo in README (#760)\r\n* Reuse persistent
+        connections when using net-http-persistent (#778)\r\n* Fix Retry middleware
+        documentation (#781)\r\n* Returns the http response when giving up on retrying
+        by status (#783)"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/9309556","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/9309556/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/9309556/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.14.0","id":9309556,"node_id":"MDc6UmVsZWFzZTkzMDk1NTY=","tag_name":"v0.14.0","target_commitish":"master","name":"Faraday
+        0.14.0","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2018-01-19T18:06:55Z","published_at":"2018-01-19T18:07:25Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.14.0","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.14.0","body":"Features:\r\n\r\n*
+        Allow overriding env proxy (#754)\r\n* Remove legacy Typhoeus adapter (#715)\r\n*
+        External Typhoeus Adapter Compatibility (#748)\r\n* Warn about missing adapter
+        when making a request (#743)\r\n* Faraday::Adapter::Test stubs now support
+        entire urls (with host) (#741)\r\n\r\nFixes:\r\n\r\n* If proxy is manually
+        provided, this takes priority over `find_proxy` (#724)\r\n* Fixes the behaviour
+        for Excon''s open_timeout (not setting write_timeout anymore) (#731)\r\n*
+        Handle all connection timeout messages in Patron (#687)\r\n\r\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/7445277","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/7445277/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/7445277/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.13.1","id":7445277,"node_id":"MDc6UmVsZWFzZTc0NDUyNzc=","tag_name":"v0.13.1","target_commitish":"master","name":"Faraday
+        0.13.1","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2017-08-18T16:16:25Z","published_at":"2017-08-18T16:17:24Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.13.1","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.13.1","body":"*
+        Fixes an incompatibility with Addressable::URI being used as uri_parser"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/7395165","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/7395165/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/7395165/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.13.0","id":7395165,"node_id":"MDc6UmVsZWFzZTczOTUxNjU=","tag_name":"v0.13.0","target_commitish":"master","name":"Faraday
+        0.13.0","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2017-08-15T09:54:52Z","published_at":"2017-08-15T10:11:41Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.13.0","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.13.0","body":"Features:\r\n\r\n*
+        Dynamically reloads the proxy when performing a request on an absolute domain
+        (#701)\r\n* Adapter support for Net::HTTP::Persistent v3.0.0 (#619)\r\n\r\nFixes:\r\n\r\n*
+        Prefer #hostname over #host. (#714)\r\n* Fixes an edge-case issue with response
+        headers parsing (missing HTTP header) (#719)"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/7122387","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/7122387/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/7122387/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.12.2","id":7122387,"node_id":"MDc6UmVsZWFzZTcxMjIzODc=","tag_name":"v0.12.2","target_commitish":"master","name":"Faraday
+        0.12.2","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2017-07-21T11:51:09Z","published_at":"2017-07-21T12:02:24Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.12.2","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.12.2","body":"*
+        Parse headers from aggregated proxy requests/responses (#681)\r\n* Guard against
+        invalid middleware configuration with warning (#685)\r\n* Do not use :insecure
+        option by default in Patron (#691)\r\n* Fixes an issue with HTTPClient not
+        raising a `Faraday::ConnectionFailed` (#702)\r\n* Fixes YAML serialization/deserialization
+        for `Faraday::Utils::Headers` (#690)\r\n* Fixes an issue with Options having
+        a nil value (#694)\r\n* Fixes an issue with Faraday.default_connection not
+        using Faraday.default_connection_options (#698)\r\n* Fixes an issue with Options.merge!
+        and Faraday instrumentation middleware (#710)\r\n\r\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/6150851","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/6150851/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/6150851/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.12.1","id":6150851,"node_id":"MDc6UmVsZWFzZTYxNTA4NTE=","tag_name":"v0.12.1","target_commitish":"master","name":"Faraday
+        0.12.1","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2017-04-21T09:11:47Z","published_at":"2017-04-21T16:06:42Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.12.1","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.12.1","body":"*
+        Fix an issue with Patron tests failing on jruby\r\n* Fix an issue with new
+        `rewind_files` feature that was causing an exception when the body was not
+        an Hash\r\n* Expose wrapped_exception in all client errors\r\n* Add Authentication
+        Section to the ReadMe"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/5948359","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/5948359/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/5948359/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.12.0.1","id":5948359,"node_id":"MDc6UmVsZWFzZTU5NDgzNTk=","tag_name":"v0.12.0.1","target_commitish":"master","name":"Faraday
+        0.12.0.1","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2017-04-02T09:18:33Z","published_at":"2017-04-02T09:20:25Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.12.0.1","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.12.0.1","body":"*
+        Hotfix release to address an issue with TravisCI deploy on Rubygems"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/5945146","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/5945146/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/5945146/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.12.0","id":5945146,"node_id":"MDc6UmVsZWFzZTU5NDUxNDY=","tag_name":"v0.12.0","target_commitish":"master","name":"Faraday
+        0.12.0","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2017-03-21T10:51:02Z","published_at":"2017-04-01T12:08:26Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.12.0","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.12.0","body":"Features:\r\n\r\n*
+        Proxy feature now relies on Ruby `URI::Generic#find_proxy` and can use `no_proxy`
+        ENV variable (not compatible with ruby < 2.0)\r\n* Adds support for `context`
+        request option to pass arbitrary information to middlewares\r\n\r\nFixes:\r\n\r\n*
+        Fix an issue with options that was causing new options to override defaults
+        ones unexpectedly\r\n* Rewind `UploadIO`s on retry to fix a compatibility
+        issue\r\n* Make multipart boundary unique\r\n* Improvements in `README.md`"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/5153275","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/5153275/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/5153275/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.11.0","id":5153275,"node_id":"MDc6UmVsZWFzZTUxNTMyNzU=","tag_name":"v0.11.0","target_commitish":"master","name":"Faraday
+        0.11.0","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2017-01-13T14:45:25Z","published_at":"2017-01-13T15:08:20Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.11.0","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.11.0","body":"Features:\r\n\r\n*
+        Add `filter` method to Logger middleware\r\n* Add support for Ruby2.4 and
+        Minitest 6\r\n* Introduce block syntax to customise the adapter\r\n\r\nFixes:\r\n\r\n*
+        Fix an issue that was allowing to override `default_connection_options` from
+        a connection instance\r\n* Fix a bug that was causing newline escape characters
+        (\"\\n\") to be used when building the Authorization header"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/5032991","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/5032991/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/5032991/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.10.1","id":5032991,"node_id":"MDc6UmVsZWFzZTUwMzI5OTE=","tag_name":"v0.10.1","target_commitish":"master","name":"Faraday
+        0.10.1","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2016-12-29T15:22:43Z","published_at":"2016-12-30T19:36:41Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.10.1","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.10.1","body":"-
+        Fix an issue with HTTPClient adapter that was causing the SSL to be reset
+        on every request\n- Rescue `IOError` instead of specific subclass\n- `Faraday::Utils::Headers`
+        can now be successfully serialised in YAML\n- Handle `default_connection_options`
+        set with hash\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/4613623","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/4613623/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/4613623/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.10.0","id":4613623,"node_id":"MDc6UmVsZWFzZTQ2MTM2MjM=","tag_name":"v0.10.0","target_commitish":"master","name":"Faraday
+        0.10.0","draft":false,"author":{"login":"iMacTia","id":2527520,"node_id":"MDQ6VXNlcjI1Mjc1MjA=","avatar_url":"https://avatars1.githubusercontent.com/u/2527520?v=4","gravatar_id":"","url":"https://api.github.com/users/iMacTia","html_url":"https://github.com/iMacTia","followers_url":"https://api.github.com/users/iMacTia/followers","following_url":"https://api.github.com/users/iMacTia/following{/other_user}","gists_url":"https://api.github.com/users/iMacTia/gists{/gist_id}","starred_url":"https://api.github.com/users/iMacTia/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/iMacTia/subscriptions","organizations_url":"https://api.github.com/users/iMacTia/orgs","repos_url":"https://api.github.com/users/iMacTia/repos","events_url":"https://api.github.com/users/iMacTia/events{/privacy}","received_events_url":"https://api.github.com/users/iMacTia/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2016-11-11T10:52:50Z","published_at":"2016-11-11T11:27:39Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.10.0","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.10.0","body":"Breaking
+        changes:\n- Drop support for Ruby 1.8\n\nFeatures:\n- Include wrapped exception/reponse
+        in ClientErrors\n- Add `response.reason_phrase`\n- Provide option to selectively
+        skip logging request/response headers\n- Add regex support for pattern matching
+        in `test` adapter\n\nFixes:\n- Add `Faraday.respond_to?` to find methods managed
+        by `method_missing`\n- em-http: `request.host` instead of `connection.host`
+        should be taken for SSL validations\n- Allow `default_connection_options`
+        to be merged when options are passed as url parameter\n- Improve splitting
+        key-value pairs in raw HTTP headers\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/1924698","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/1924698/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/1924698/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.8.11","id":1924698,"node_id":"MDc6UmVsZWFzZTE5MjQ2OTg=","tag_name":"v0.8.11","target_commitish":"master","name":"Faraday
+        0.8.11","draft":false,"author":{"login":"mislav","id":887,"node_id":"MDQ6VXNlcjg4Nw==","avatar_url":"https://avatars2.githubusercontent.com/u/887?v=4","gravatar_id":"","url":"https://api.github.com/users/mislav","html_url":"https://github.com/mislav","followers_url":"https://api.github.com/users/mislav/followers","following_url":"https://api.github.com/users/mislav/following{/other_user}","gists_url":"https://api.github.com/users/mislav/gists{/gist_id}","starred_url":"https://api.github.com/users/mislav/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mislav/subscriptions","organizations_url":"https://api.github.com/users/mislav/orgs","repos_url":"https://api.github.com/users/mislav/repos","events_url":"https://api.github.com/users/mislav/events{/privacy}","received_events_url":"https://api.github.com/users/mislav/received_events","type":"User","site_admin":true},"prerelease":false,"created_at":"2015-10-07T15:06:17Z","published_at":"2015-10-07T15:07:57Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.8.11","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.8.11","body":"-
+        Fix Faraday::Utils::Headers with regards to replacing and duping the internal
+        key cache\n- Make excon adapter compatible with 0.44 excon version\n- Make
+        sure the post request body doesn''t get lost when retrying.\n- Copy request
+        options in Faraday::Connection#dup\n- em-http: wrap \"connection closed by
+        server\" as ConnectionFailed type\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/1919117","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/1919117/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/1919117/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.9.2","id":1919117,"node_id":"MDc6UmVsZWFzZTE5MTkxMTc=","tag_name":"v0.9.2","target_commitish":"master","name":"Faraday
+        0.9.2","draft":false,"author":{"login":"mislav","id":887,"node_id":"MDQ6VXNlcjg4Nw==","avatar_url":"https://avatars2.githubusercontent.com/u/887?v=4","gravatar_id":"","url":"https://api.github.com/users/mislav","html_url":"https://github.com/mislav","followers_url":"https://api.github.com/users/mislav/followers","following_url":"https://api.github.com/users/mislav/following{/other_user}","gists_url":"https://api.github.com/users/mislav/gists{/gist_id}","starred_url":"https://api.github.com/users/mislav/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mislav/subscriptions","organizations_url":"https://api.github.com/users/mislav/orgs","repos_url":"https://api.github.com/users/mislav/repos","events_url":"https://api.github.com/users/mislav/events{/privacy}","received_events_url":"https://api.github.com/users/mislav/received_events","type":"User","site_admin":true},"prerelease":false,"created_at":"2015-10-06T16:30:31Z","published_at":"2015-10-06T16:43:26Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.9.2","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.9.2","body":"Adapters:\n-
+        Enable gzip compression for httpclient\n- Fixes default certificate store
+        for httpclient not having default paths.\n- Make excon adapter compatible
+        with 0.44 excon version\n- Add compatibility with Patron 0.4.20\n- Determine
+        default port numbers in Net::HTTP adapters (Addressable compatibility)\n-
+        em-http: wrap \"connection closed by server\" as ConnectionFailed type\n-
+        Wrap Errno::ETIMEDOUT in Faraday::Error::TimeoutError\n\nUtils:\n- Add Rack-compatible
+        support for parsing `a[][b]=c` nested queries\n- Encode nil values in queries
+        different than empty strings. Before: `a=`; now: `a`.\n- Have `Faraday::Utils::Headers#replace`
+        clear internal key cache\n- Dup the internal key cache when a Headers hash
+        is copied\n\nEnv and middleware:\n- Ensure `env` stored on middleware response
+        has reference to the response\n- Ensure that Response properties are initialized
+        during `on_complete` (VCR compatibility)\n- Copy request options in Faraday::Connection#dup\n-
+        Env custom members should be copied by Env.from(env)\n- Honour per-request
+        `request.options.params_encoder`\n- Fix `interval_randomness` data type for
+        Retry middleware\n- Add maximum interval option for Retry middleware\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/1703265","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/1703265/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/1703265/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.8.10","id":1703265,"node_id":"MDc6UmVsZWFzZTE3MDMyNjU=","tag_name":"v0.8.10","target_commitish":"master","name":"Faraday
+        0.8.10","draft":false,"author":{"login":"mislav","id":887,"node_id":"MDQ6VXNlcjg4Nw==","avatar_url":"https://avatars2.githubusercontent.com/u/887?v=4","gravatar_id":"","url":"https://api.github.com/users/mislav","html_url":"https://github.com/mislav","followers_url":"https://api.github.com/users/mislav/followers","following_url":"https://api.github.com/users/mislav/following{/other_user}","gists_url":"https://api.github.com/users/mislav/gists{/gist_id}","starred_url":"https://api.github.com/users/mislav/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mislav/subscriptions","organizations_url":"https://api.github.com/users/mislav/orgs","repos_url":"https://api.github.com/users/mislav/repos","events_url":"https://api.github.com/users/mislav/events{/privacy}","received_events_url":"https://api.github.com/users/mislav/received_events","type":"User","site_admin":true},"prerelease":false,"created_at":"2015-08-21T06:30:59Z","published_at":"2015-08-21T06:36:34Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.8.10","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.8.10","body":"-
+        Fix compatibility with Addressable::URI and HTTPS default port number\n- Treat
+        connection timeouts as connection failures in Net::HTTP adapter\n- Add compatibility
+        with Patron 0.4.20+\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/159266","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/159266/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/159266/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.8.9","id":159266,"node_id":"MDc6UmVsZWFzZTE1OTI2Ng==","tag_name":"v0.8.9","target_commitish":"master","name":"v0.8.9","draft":false,"author":{"login":"technoweenie","id":21,"node_id":"MDQ6VXNlcjIx","avatar_url":"https://avatars3.githubusercontent.com/u/21?v=4","gravatar_id":"","url":"https://api.github.com/users/technoweenie","html_url":"https://github.com/technoweenie","followers_url":"https://api.github.com/users/technoweenie/followers","following_url":"https://api.github.com/users/technoweenie/following{/other_user}","gists_url":"https://api.github.com/users/technoweenie/gists{/gist_id}","starred_url":"https://api.github.com/users/technoweenie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/technoweenie/subscriptions","organizations_url":"https://api.github.com/users/technoweenie/orgs","repos_url":"https://api.github.com/users/technoweenie/repos","events_url":"https://api.github.com/users/technoweenie/events{/privacy}","received_events_url":"https://api.github.com/users/technoweenie/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2014-01-10T00:55:08Z","published_at":"2014-01-24T00:17:04Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.8.9","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.8.9","body":"-
+        Hot fix for ruby v2.1.0 (@mislav)\n- Bump excon gem (@mislav)\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/88675","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/88675/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/88675/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.9.0.rc6","id":88675,"node_id":"MDc6UmVsZWFzZTg4Njc1","tag_name":"v0.9.0.rc6","target_commitish":"master","name":"v0.9.0.rc6","draft":false,"author":{"login":"technoweenie","id":21,"node_id":"MDQ6VXNlcjIx","avatar_url":"https://avatars3.githubusercontent.com/u/21?v=4","gravatar_id":"","url":"https://api.github.com/users/technoweenie","html_url":"https://github.com/technoweenie","followers_url":"https://api.github.com/users/technoweenie/followers","following_url":"https://api.github.com/users/technoweenie/following{/other_user}","gists_url":"https://api.github.com/users/technoweenie/gists{/gist_id}","starred_url":"https://api.github.com/users/technoweenie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/technoweenie/subscriptions","organizations_url":"https://api.github.com/users/technoweenie/orgs","repos_url":"https://api.github.com/users/technoweenie/repos","events_url":"https://api.github.com/users/technoweenie/events{/privacy}","received_events_url":"https://api.github.com/users/technoweenie/received_events","type":"User","site_admin":false},"prerelease":true,"created_at":"2013-11-09T15:42:34Z","published_at":"2013-11-09T15:53:07Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.9.0.rc6","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.9.0.rc6","body":"-
+        Fix multipart content type values.  (@lloydmeta)\n- Better support for HTTP
+        proxying.  (@mislav) \n- Make `Faraday::Options` behave more like a hash.  (@mislav,
+        @benburkert)\n- Improved client cert configuration in Excon (@ehowe)\n- Retry
+        middleware adds backoff/randomness.  (@timgaleckas)\n\n:star: [See the full
+        changelog](https://github.com/lostisland/faraday/compare/v0.9.0.rc5...v0.9.0.rc6)
+        :star: \n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/88672","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/88672/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/88672/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.9.0.rc5","id":88672,"node_id":"MDc6UmVsZWFzZTg4Njcy","tag_name":"v0.9.0.rc5","target_commitish":"master","name":"","draft":false,"author":{"login":"technoweenie","id":21,"node_id":"MDQ6VXNlcjIx","avatar_url":"https://avatars3.githubusercontent.com/u/21?v=4","gravatar_id":"","url":"https://api.github.com/users/technoweenie","html_url":"https://github.com/technoweenie","followers_url":"https://api.github.com/users/technoweenie/followers","following_url":"https://api.github.com/users/technoweenie/following{/other_user}","gists_url":"https://api.github.com/users/technoweenie/gists{/gist_id}","starred_url":"https://api.github.com/users/technoweenie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/technoweenie/subscriptions","organizations_url":"https://api.github.com/users/technoweenie/orgs","repos_url":"https://api.github.com/users/technoweenie/repos","events_url":"https://api.github.com/users/technoweenie/events{/privacy}","received_events_url":"https://api.github.com/users/technoweenie/received_events","type":"User","site_admin":false},"prerelease":true,"created_at":"2013-05-13T21:21:10Z","published_at":"2013-11-08T20:23:17Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.9.0.rc5","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.9.0.rc5","body":"-
+        Expose `false` values in `Faraday::Options`.\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/88670","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/88670/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/88670/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.9.0.rc4","id":88670,"node_id":"MDc6UmVsZWFzZTg4Njcw","tag_name":"v0.9.0.rc4","target_commitish":"master","name":"","draft":false,"author":{"login":"technoweenie","id":21,"node_id":"MDQ6VXNlcjIx","avatar_url":"https://avatars3.githubusercontent.com/u/21?v=4","gravatar_id":"","url":"https://api.github.com/users/technoweenie","html_url":"https://github.com/technoweenie","followers_url":"https://api.github.com/users/technoweenie/followers","following_url":"https://api.github.com/users/technoweenie/following{/other_user}","gists_url":"https://api.github.com/users/technoweenie/gists{/gist_id}","starred_url":"https://api.github.com/users/technoweenie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/technoweenie/subscriptions","organizations_url":"https://api.github.com/users/technoweenie/orgs","repos_url":"https://api.github.com/users/technoweenie/repos","events_url":"https://api.github.com/users/technoweenie/events{/privacy}","received_events_url":"https://api.github.com/users/technoweenie/received_events","type":"User","site_admin":false},"prerelease":true,"created_at":"2013-05-13T21:18:40Z","published_at":"2013-11-08T20:22:20Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.9.0.rc4","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.9.0.rc4","body":"-
+        Teach Faraday::Options about `#merge!`\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/16245","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/16245/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/16245/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.8.8","id":16245,"node_id":"MDc6UmVsZWFzZTE2MjQ1","tag_name":"v0.8.8","target_commitish":"master","name":"Faraday
+        v0.8.8","draft":false,"author":{"login":"mislav","id":887,"node_id":"MDQ6VXNlcjg4Nw==","avatar_url":"https://avatars2.githubusercontent.com/u/887?v=4","gravatar_id":"","url":"https://api.github.com/users/mislav","html_url":"https://github.com/mislav","followers_url":"https://api.github.com/users/mislav/followers","following_url":"https://api.github.com/users/mislav/following{/other_user}","gists_url":"https://api.github.com/users/mislav/gists{/gist_id}","starred_url":"https://api.github.com/users/mislav/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mislav/subscriptions","organizations_url":"https://api.github.com/users/mislav/orgs","repos_url":"https://api.github.com/users/mislav/repos","events_url":"https://api.github.com/users/mislav/events{/privacy}","received_events_url":"https://api.github.com/users/mislav/received_events","type":"User","site_admin":true},"prerelease":false,"created_at":"2013-07-26T14:15:48Z","published_at":"2013-07-26T14:25:29Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.8.8","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.8.8","body":"-
+        Better Ruby 2.0 compatibility\n- Better HTTP proxy + basic authentication
+        support across adapters - [integration tests against a real proxy server](https://github.com/lostisland/faraday/blob/v0.8.8/test/adapters/integration.rb#L175-201)\n-
+        More consistent handling of connection failures across adapters\n- Free of
+        syntax warnings in Ruby verbose mode - [verified by our CI](https://github.com/lostisland/faraday/blob/v0.8.8/script/test#L144-158)\n\n:star:
+        [See the full changelog](https://github.com/lostisland/faraday/compare/v0.8.7...v0.8.8)
+        :star: \n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/7116","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/7116/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/7116/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.8.0.rc","id":7116,"node_id":"MDc6UmVsZWFzZTcxMTY=","tag_name":"v0.8.0.rc","target_commitish":"master","name":"v0.8.0
+        release candidate","draft":false,"author":{"login":"technoweenie","id":21,"node_id":"MDQ6VXNlcjIx","avatar_url":"https://avatars3.githubusercontent.com/u/21?v=4","gravatar_id":"","url":"https://api.github.com/users/technoweenie","html_url":"https://github.com/technoweenie","followers_url":"https://api.github.com/users/technoweenie/followers","following_url":"https://api.github.com/users/technoweenie/following{/other_user}","gists_url":"https://api.github.com/users/technoweenie/gists{/gist_id}","starred_url":"https://api.github.com/users/technoweenie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/technoweenie/subscriptions","organizations_url":"https://api.github.com/users/technoweenie/orgs","repos_url":"https://api.github.com/users/technoweenie/repos","events_url":"https://api.github.com/users/technoweenie/events{/privacy}","received_events_url":"https://api.github.com/users/technoweenie/received_events","type":"User","site_admin":false},"prerelease":true,"created_at":"2012-01-28T22:10:39Z","published_at":"2013-07-09T20:40:05Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.8.0.rc","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.8.0.rc","body":""},{"url":"https://api.github.com/repos/lostisland/faraday/releases/272","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/272/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/272/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.9.0","id":272,"node_id":"MDc6UmVsZWFzZTI3Mg==","tag_name":"v0.9.0","target_commitish":"master","name":"v0.9.0","draft":false,"author":{"login":"technoweenie","id":21,"node_id":"MDQ6VXNlcjIx","avatar_url":"https://avatars3.githubusercontent.com/u/21?v=4","gravatar_id":"","url":"https://api.github.com/users/technoweenie","html_url":"https://github.com/technoweenie","followers_url":"https://api.github.com/users/technoweenie/followers","following_url":"https://api.github.com/users/technoweenie/following{/other_user}","gists_url":"https://api.github.com/users/technoweenie/gists{/gist_id}","starred_url":"https://api.github.com/users/technoweenie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/technoweenie/subscriptions","organizations_url":"https://api.github.com/users/technoweenie/orgs","repos_url":"https://api.github.com/users/technoweenie/repos","events_url":"https://api.github.com/users/technoweenie/events{/privacy}","received_events_url":"https://api.github.com/users/technoweenie/received_events","type":"User","site_admin":false},"prerelease":false,"created_at":"2014-01-16T05:07:48Z","published_at":"2014-01-24T00:17:19Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.9.0","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.9.0","body":"-
+        Add HTTPClient adapter (@hakanensari)\n- Improve Retry handler (@mislav, @timgaleckas)\n-
+        Remove autoloading by default (@technoweenie)\n- Improve internal docs (@technoweenie,
+        @mislav)\n- Better support for HTTP proxying.  (@mislav) \n- Adapter options
+        are structs. Reinforces consistent options across adapters (@technoweenie)\n-
+        Stop stripping trailing `/` off base URLs in a `Faraday::Connection`.\n- Add
+        a configurable URI parser.\n- Remove need to manually autoload when using
+        the authorization header helpers on `Faraday::Connection`.\n- `Faraday::Adapter::Test`
+        respects the `Faraday::RequestOptions#params_encoder` option.\n- Fix multipart
+        content type values.  (@lloydmeta)\n- Make `Faraday::Options` behave more
+        like a hash.  (@mislav, @benburkert, @sferik)\n\n:star: [See the full changelog](https://github.com/lostisland/faraday/compare/v0.8.9...v0.9.0)
+        :star: \n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/252","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/252/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/252/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.9.0.rc3","id":252,"node_id":"MDc6UmVsZWFzZTI1Mg==","tag_name":"v0.9.0.rc3","target_commitish":"master","name":"","draft":false,"author":{"login":"technoweenie","id":21,"node_id":"MDQ6VXNlcjIx","avatar_url":"https://avatars3.githubusercontent.com/u/21?v=4","gravatar_id":"","url":"https://api.github.com/users/technoweenie","html_url":"https://github.com/technoweenie","followers_url":"https://api.github.com/users/technoweenie/followers","following_url":"https://api.github.com/users/technoweenie/following{/other_user}","gists_url":"https://api.github.com/users/technoweenie/gists{/gist_id}","starred_url":"https://api.github.com/users/technoweenie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/technoweenie/subscriptions","organizations_url":"https://api.github.com/users/technoweenie/orgs","repos_url":"https://api.github.com/users/technoweenie/repos","events_url":"https://api.github.com/users/technoweenie/events{/privacy}","received_events_url":"https://api.github.com/users/technoweenie/received_events","type":"User","site_admin":false},"prerelease":true,"created_at":"2013-05-13T20:41:08Z","published_at":"2013-05-13T20:42:58Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.9.0.rc3","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.9.0.rc3","body":"-
+        Remove need to manually autoload when using the authorization header helpers
+        on `Faraday::Connection`.\n- `Faraday::Adapter::Test` respects the `Faraday::RequestOptions#params_encoder`
+        option.\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/251","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/251/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/251/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.9.0.rc2","id":251,"node_id":"MDc6UmVsZWFzZTI1MQ==","tag_name":"v0.9.0.rc2","target_commitish":"master","name":"","draft":false,"author":{"login":"technoweenie","id":21,"node_id":"MDQ6VXNlcjIx","avatar_url":"https://avatars3.githubusercontent.com/u/21?v=4","gravatar_id":"","url":"https://api.github.com/users/technoweenie","html_url":"https://github.com/technoweenie","followers_url":"https://api.github.com/users/technoweenie/followers","following_url":"https://api.github.com/users/technoweenie/following{/other_user}","gists_url":"https://api.github.com/users/technoweenie/gists{/gist_id}","starred_url":"https://api.github.com/users/technoweenie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/technoweenie/subscriptions","organizations_url":"https://api.github.com/users/technoweenie/orgs","repos_url":"https://api.github.com/users/technoweenie/repos","events_url":"https://api.github.com/users/technoweenie/events{/privacy}","received_events_url":"https://api.github.com/users/technoweenie/received_events","type":"User","site_admin":false},"prerelease":true,"created_at":"2013-05-13T19:32:06Z","published_at":"2013-05-13T19:38:57Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.9.0.rc2","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.9.0.rc2","body":"-
+        Stop stripping trailing `/` off base URLs in a `Faraday::Connection`.\n- Add
+        a configurable URI parser.\n"},{"url":"https://api.github.com/repos/lostisland/faraday/releases/247","assets_url":"https://api.github.com/repos/lostisland/faraday/releases/247/assets","upload_url":"https://uploads.github.com/repos/lostisland/faraday/releases/247/assets{?name,label}","html_url":"https://github.com/lostisland/faraday/releases/tag/v0.9.0.rc1","id":247,"node_id":"MDc6UmVsZWFzZTI0Nw==","tag_name":"v0.9.0.rc1","target_commitish":"master","name":"","draft":false,"author":{"login":"technoweenie","id":21,"node_id":"MDQ6VXNlcjIx","avatar_url":"https://avatars3.githubusercontent.com/u/21?v=4","gravatar_id":"","url":"https://api.github.com/users/technoweenie","html_url":"https://github.com/technoweenie","followers_url":"https://api.github.com/users/technoweenie/followers","following_url":"https://api.github.com/users/technoweenie/following{/other_user}","gists_url":"https://api.github.com/users/technoweenie/gists{/gist_id}","starred_url":"https://api.github.com/users/technoweenie/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/technoweenie/subscriptions","organizations_url":"https://api.github.com/users/technoweenie/orgs","repos_url":"https://api.github.com/users/technoweenie/repos","events_url":"https://api.github.com/users/technoweenie/events{/privacy}","received_events_url":"https://api.github.com/users/technoweenie/received_events","type":"User","site_admin":false},"prerelease":true,"created_at":"2013-05-08T14:10:41Z","published_at":"2013-05-13T19:37:17Z","assets":[],"tarball_url":"https://api.github.com/repos/lostisland/faraday/tarball/v0.9.0.rc1","zipball_url":"https://api.github.com/repos/lostisland/faraday/zipball/v0.9.0.rc1","body":"-
+        Add HTTPClient adapter (@hakanensari)\n- Improve Retry handler (@mislav)\n-
+        Remove autoloading by default (@technoweenie)\n- Improve internal docs (@technoweenie,
+        @mislav)\n- Respect user/password in http proxy string (@mislav)\n- Adapter
+        options are structs.  Reinforces consistent options across adapters (@technoweenie)\n"}]'
+    http_version: 
+  recorded_at: Tue, 09 Apr 2019 15:09:29 GMT
+recorded_with: VCR 4.0.0
