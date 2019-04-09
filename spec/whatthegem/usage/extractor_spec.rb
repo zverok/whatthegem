@@ -1,6 +1,4 @@
-require 'whatthegem/usage_extractor'
-
-RSpec.describe WhatTheGem::UsageExtractor do
+RSpec.describe WhatTheGem::Usage::Extractor do
   def readme(name)
     VCR.use_cassette("readme/#{name}") do
       WhatTheGem::Gem.new(name).github.readme

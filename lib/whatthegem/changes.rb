@@ -2,7 +2,7 @@ module WhatTheGem
   class Changes < Command
     register 'changes'
 
-    VERSION_REGEXP = /^(?:v(?:er(?:sion)?)? ?)?(\d+\.\d+(\.\d+(\.\w+)?)?)(\s|$)/i
+    VERSION_REGEXP = /^(?:v(?:er(?:sion)?)? ?)?(\d+\.\d+(\.\d+(\.\w+)?)?)(\s|:|$)/i
 
     class Version < Struct.new(:number, :header, :body, keyword_init: true)
       def initialize(number:, header:, body:)
@@ -77,7 +77,7 @@ module WhatTheGem
     end
 
     memoize def versions
-      versions_from_releases.then.reject(&:empty?).first || versions_from_file
+      best_changelog(versions_from_releases, versions_from_file)
     end
 
     def versions_from_releases
@@ -87,6 +87,15 @@ module WhatTheGem
     def versions_from_file
       # always take the freshest from GitHub, even when installed locally
       gem.github&.changelog&.then(&Parser)
+    end
+
+    def best_changelog(*changelogs)
+      changelogs.compact.reject(&:empty?)
+        .tap { |list| return list.first if list.size < 2 }
+        .tap { |list|
+          next if list.map { |*, last| last.number }.uniq.one?
+          return list.max_by { |*, last| last.number}
+        }.max_by { |*, last| last.body.size }
     end
   end
 end

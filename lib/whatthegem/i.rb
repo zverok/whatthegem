@@ -1,3 +1,4 @@
+require 'rdoc'
 require 'kramdown'
 require 'kramdown-parser-gfm'
 

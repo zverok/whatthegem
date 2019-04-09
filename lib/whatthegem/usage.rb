@@ -1,5 +1,3 @@
-require_relative '../usage_extractor'
-
 module WhatTheGem
   # TODO
   # use Piotr's markdown formatter
@@ -17,7 +15,7 @@ module WhatTheGem
 
     def locals
       {
-        usage: readme.then(&UsageExtractor.method(:new)).call
+        usage: readme.then(&Extractor)
       }
     end
 
@@ -25,7 +23,7 @@ module WhatTheGem
 
     def readme
       local_readme || github_readme or fail "README not found"
-            # abort "README not found in #{spec.gem_dir}"
+      # better?.. "README not found in #{spec.gem_dir}"
     end
 
     def local_readme
@@ -37,3 +35,5 @@ module WhatTheGem
     end
   end
 end
+
+require_relative 'usage/extractor'

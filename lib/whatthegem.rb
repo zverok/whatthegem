@@ -12,3 +12,4 @@ require_relative 'whatthegem/hobject'
 require_relative 'whatthegem/commands'
 
 require_relative 'whatthegem/changes'
+require_relative 'whatthegem/usage'
