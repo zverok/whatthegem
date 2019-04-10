@@ -5,6 +5,9 @@ module WhatTheGem
     module Definitions
       require_relative 'meters'
 
+      FIFTY_PLUS = proc { |res| res == 50 ? '50+' : res }
+      HAS_REACTION = proc { |i| i[:labels].any? || i[:comments].positive? }
+
       def self.meters
         @meters ||= []
       end
@@ -23,6 +26,7 @@ module WhatTheGem
         :rubygems, :versions, 0, :created_at,
         thresholds: [T.year.decrease(now), T.month.decrease(now, 2)],
         &Time.method(:parse)
+
       metric 'Used by', :rubygems, :reverse_dependencies, :count, thresholds: [10, 100]
 
       metric 'Stars', :github, :repo, :stargazers_count, thresholds: [100, 500]
@@ -31,16 +35,15 @@ module WhatTheGem
         :github, :last_commit, :commit, :committer, :date,
         thresholds: [T.month.decrease(now, 4), T.month.decrease(now)]
 
-      metric('Open issues', :github, :open_issues, :count) { |res| res == 50 ? '50+' : res }
+      metric('Open issues', :github, :open_issues, :count, &FIFTY_PLUS)
       metric('...without reaction', :github, :open_issues, thresholds: [-20, -4]) { |issues|
-        issues.reject { |i| i[:labels].any? || i[:comments].positive? }.count
+        issues.reject(&HAS_REACTION).count
       }
       metric('...last reaction',
         :github, :open_issues,
-        thresholds: [T.month.decrease(now), T.week.decrease(now)]) { |issues|
-        issues.detect { |i| i[:labels].any? || i[:comments].positive? }&.dig(:updated_at)
-      }
-      metric('Open issues', :github, :closed_issues, :count) { |res| res == 50 ? '50+' : res }
+        thresholds: [T.month.decrease(now), T.week.decrease(now)]
+      ) { |issues| issues.detect(&HAS_REACTION)&.dig(:updated_at) }
+      metric('Open issues', :github, :closed_issues, :count, &FIFTY_PLUS)
       metric '...last closed', :github, :closed_issues, 0, :closed_at
     end
   end
