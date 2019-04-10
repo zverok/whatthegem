@@ -53,9 +53,7 @@ module WhatTheGem
           # 100000 => 100,000
           value.to_s.chars.reverse.each_slice(3).to_a.map(&:join).join(',').reverse
         when Date, Time
-          diff = TimeMath.measure(value, Time.now)
-          unit, num = diff.detect { |_, v| !v.zero? }
-          "#{num} #{unit} ago"
+          I.ago_text(value)
         else
           fail ArgumentError, "Unformattable #{value.inspect}"
         end

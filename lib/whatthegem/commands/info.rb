@@ -12,7 +12,7 @@ module WhatTheGem
 
       {{info.info | paragraphs:1 }}
 
-      Latest version: {{info.version}}
+      Latest version: {{info.version}} ({{age}})
       Installed versions: {% if specs %}{{ specs | map:"version" | join: ", "}}{% else %}—{% endif %}
       {% if current %}Most recent installed at: {{current.dir}}{% endif %}
       {% unless bundled.type == 'nobundle' %}In your bundle: {% if bundled.type == 'notbundled' %}—{% else
@@ -22,6 +22,7 @@ module WhatTheGem
     def locals
       {
         info: gem.rubygems.info,
+        age: age,
         uris: guess_uris(gem.rubygems.info),
         specs: specs,
         current: specs.last,
@@ -30,6 +31,12 @@ module WhatTheGem
     end
 
     private
+
+    def age
+      gem.rubygems.versions
+        .first&.dig(:created_at)
+        &.then(&Time.method(:parse))&.then(&I.method(:ago_text))
+    end
 
     def specs
       gem.specs.map { |spec|

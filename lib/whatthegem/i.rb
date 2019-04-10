@@ -6,6 +6,8 @@ module WhatTheGem
   # I for Internal
   # @private
   module I
+    extend self
+
     module Callable
       def to_proc
         proc { |*args| call(*args) }
@@ -38,6 +40,12 @@ module WhatTheGem
         formatter = RDoc::Markup::ToMarkdown.new
         RDoc::Markup::Document.new(part).accept(formatter)
       end
+    end
+
+    def ago_text(tm)
+      diff = TimeMath.measure(tm, Time.now)
+      unit, num = diff.detect { |_, v| !v.zero? }
+      "#{num} #{unit} ago"
     end
   end
 end
