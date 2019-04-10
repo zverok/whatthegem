@@ -16,14 +16,17 @@ Gem::Specification.new do |s|
   s.executables << 'whatthegem'
 
   s.add_runtime_dependency 'pastel'
+  s.add_runtime_dependency 'tty-markdown'
+  s.add_runtime_dependency 'rouge'
   s.add_runtime_dependency 'octokit'
   s.add_runtime_dependency 'gems'
   s.add_runtime_dependency 'memoist'
   s.add_runtime_dependency 'backports'
   s.add_runtime_dependency 'time_math2'
   s.add_runtime_dependency 'hm'
-  s.add_runtime_dependency 'kramdown', '~> 2.0'
-  s.add_runtime_dependency 'kramdown-parser-gfm'
+  # s.add_runtime_dependency 'kramdown', '~> 2.0'
+  # s.add_runtime_dependency 'kramdown-parser-gfm'
+  s.add_runtime_dependency 'kramdown', '~> 1.16' # tty-markdown can't
   s.add_runtime_dependency 'liquid'
 
   s.add_development_dependency 'rake'

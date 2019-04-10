@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift File.expand_path '../lib', __dir__
 
+require 'dotenv/load' # FIXME: Remove before release :)
 require 'whatthegem'
 
 name, cmd, *args = ARGV

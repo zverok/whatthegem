@@ -33,13 +33,15 @@ module WhatTheGem
     end
 
     TEMPLATE = Template.parse(<<~CHANGES)
-      # Changes since {{ since.description }}
+      ## Changes since {{ since.description }}
 
-      {% for version in versions
-      %}## {{ version.header }}
+      {% for version in versions %}
+      ### {{ version.header }}
 
-      {{ version.body }}{%
-      endfor %}
+      {{ version.body | md_header_shift:4 }}
+
+      {% endfor %}
+
     CHANGES
 
     def locals
@@ -50,6 +52,10 @@ module WhatTheGem
     end
 
     private
+
+    def output
+      markdown super
+    end
 
     # TODO: allow to pass `since` as a parameter
     def since

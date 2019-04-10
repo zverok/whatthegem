@@ -10,10 +10,18 @@ module WhatTheGem
       def nfirst(array, num)
         array.first(num)
       end
+
+      # Consistently shift all markdown headers - ### - so they would be at least minlevel deep
+      def md_header_shift(text, minlevel)
+        current_min = text.scan(/^(\#+) /).flatten.map(&:length).min
+        return text if !current_min || current_min > minlevel
+        shift = minlevel - current_min
+        text.gsub(/^(\#+) /, '#' * shift + '\\1 ')
+      end
     end
 
     def self.parse(src)
-      new.parse(src.rstrip)
+      new.parse(src.chomp.gsub(/\n *({%.+?%})\n/, "\\1\n"))
     end
 
     def parse(src)

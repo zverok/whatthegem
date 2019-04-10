@@ -1,6 +1,6 @@
 require 'rdoc'
 require 'kramdown'
-require 'kramdown-parser-gfm'
+# require 'kramdown-parser-gfm'
 
 module WhatTheGem
   # I for Internal

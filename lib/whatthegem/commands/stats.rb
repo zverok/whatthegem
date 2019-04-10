@@ -2,10 +2,8 @@ module WhatTheGem
   class Stats < Command
     register 'stats'
 
-    def call
-      Definitions.meters.each do |meter|
-        puts meter.call(gem).format
-      end
+    def output
+      Definitions.meters.map { |meter| meter.call(gem).format }.join("\n")
     end
   end
 end
