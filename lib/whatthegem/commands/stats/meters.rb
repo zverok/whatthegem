@@ -2,22 +2,25 @@ require 'pastel'
 
 module WhatTheGem
   class Stats
-    class Meter < Struct.new(:name, :thresholds, :block)
+    class Meter < Struct.new(:name, :path, :thresholds, :block)
       def call(gem)
-        Metric.new(name, value(gem), *thresholds)
+        dig(gem, *path)
+          &.then(&block)
+          &.then { |val| Metric.new(name, val, *thresholds) }
       end
 
       private
 
-      attr_reader :gem
-
-      def value(gem)
-        @gem = gem
-        instance_eval(&block)
-      rescue NoMethodError # naive way to deal with gem.github.open_issues in blocks, when github is undefined
-        nil
-      ensure
-        @gem = nil
+      def dig(value, first = nil, *rest)
+        return value unless first
+        case value
+        when ->(v) { first.is_a?(Symbol) && v.respond_to?(first) }
+          dig(value.public_send(first), *rest)
+        when Hash, Array
+          value.dig(first, *rest)
+        else
+          fail "Can't dig #{first} in #{value}"
+        end
       end
     end
 
