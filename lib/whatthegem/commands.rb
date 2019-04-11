@@ -81,4 +81,4 @@ module WhatTheGem
   end
 end
 
-Dir[File.expand_path('./commands/*.rb', __dir__)].each(&method(:require))
+%w[info usage changes stats].each { |f| require_relative(f) }
