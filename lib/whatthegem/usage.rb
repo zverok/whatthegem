@@ -10,12 +10,14 @@ module WhatTheGem
     register 'usage'
 
     TEMPLATE = Template.parse(<<~USAGE)
-      {{ usage | nfirst:2 | join:"\n\n" }}
+      {% for u in usage %}
+      {{ u.body | rouge }}
+      {% endfor %}
     USAGE
 
     def locals
       {
-        usage: readme.then(&Extractor)
+        usage: readme.then(&Extractor).first(2).map(&:to_h)
       }
     end
 

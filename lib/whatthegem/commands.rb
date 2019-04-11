@@ -26,9 +26,10 @@ module WhatTheGem
     # (At the same time, RSpec's info reads "BDD for Ruby".)
 
     HEADER_TEMPLATE = Template.parse(<<~HEADER)
-      # {{info.name}} ({{uris | join:", "}})
+      # {{info.name}}
+      > **{{info.info | paragraphs:1 | reflow }}**
+      ({{uris | join:", "}})
 
-      **{{info.info | paragraphs:1 }}**
 
 
     HEADER

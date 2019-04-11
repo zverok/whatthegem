@@ -9,7 +9,7 @@ RSpec.describe WhatTheGem::Usage::Extractor do
     context "for #{gemname}" do
       let(:file) { readme(gemname) }
 
-      subject { described_class.new(file).call }
+      subject { described_class.new(file).call.map(&:body) }
 
       it {
         is_expected.to start_with blocks.map(&method(:start_with))
@@ -17,14 +17,12 @@ RSpec.describe WhatTheGem::Usage::Extractor do
     end
   end
 
-  it_behaves_like 'extract usage',
-    'faraday',
+  it_behaves_like 'extract usage', 'faraday',
     "response = Faraday.get 'http://sushi.com/nigiri/sake.json'",
     "conn = Faraday.new(:url => 'http://www.example.com')\n" \
     "response = conn.get '/users'                 # GET http://www.example.com/users'"
 
-  it_behaves_like 'extract usage',
-    'sequel',
+  it_behaves_like 'extract usage', 'sequel',
     %q{
       require 'sequel'
 
@@ -50,8 +48,7 @@ RSpec.describe WhatTheGem::Usage::Extractor do
       puts "The average price is: #{items.avg(:price)}"
     }.squig
 
-  it_behaves_like 'extract usage',
-    'sinatra',
+  it_behaves_like 'extract usage', 'sinatra',
     '# myapp.rb',
     "get '/' do"
 end

@@ -1,3 +1,5 @@
+require 'ripper'
+
 module WhatTheGem
   class Usage
     # TODO:
@@ -24,6 +26,39 @@ module WhatTheGem
 
       extend I::Callable
 
+      class CodeBlock < Struct.new(:body)
+        def initialize(body)
+          super(try_sanitize(body))
+        end
+
+        def ruby?
+          # Ripper returns nil for anything but correct Ruby
+          #
+          # TODO: Unfortunately, Ripper is fixed to current version syntax, so trying this trick on
+          # Ruby 2.4 with something that uses Ruby 2.7 features will unhelpfully return "no, not Ruby"
+          #
+          # Maybe trying parser gem could lead to the same effect
+          !Ripper.sexp(body).nil?
+        end
+
+        def service?
+          body.match?(REMOVE_BLOCKS_RE)
+        end
+
+        def to_h
+          {body: body}
+        end
+
+        private
+
+        def try_sanitize(text)
+          text
+            .gsub(/^>> /, '')             # Imitating work from IRB, TODO: various IRB/Pry patterns
+            .gsub(/^(=> )/, '# \\1')      # Output in IRB, should be hidden as comment
+            .gsub(/^( *)(\.{2,})/, '\\1# \\2') # "...and so on..." in code examples
+        end
+      end
+
       def self.call(file)
         new(file).call
       end
@@ -33,7 +68,7 @@ module WhatTheGem
       end
 
       def call
-        code_blocks(file.read).grep_v(REMOVE_BLOCKS_RE)
+        code_blocks(file.read).map(&CodeBlock.method(:new)).reject(&:service?).select(&:ruby?)
       end
 
       private

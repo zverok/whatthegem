@@ -1,10 +1,15 @@
 require 'liquid'
+require 'rouge'
 
 module WhatTheGem
   class Template < Liquid::Template
     module Filters
       def paragraphs(text, num)
         text.split("\n\n").first(num).join("\n\n").gsub(/\n +/, "\n").strip
+      end
+
+      def reflow(text)
+        text.tr("\n", ' ')
       end
 
       def nfirst(array, num)
@@ -17,6 +22,11 @@ module WhatTheGem
         return text if !current_min || current_min > minlevel
         shift = minlevel - current_min
         text.gsub(/^(\#+) /, '#' * shift + '\\1 ')
+      end
+
+      def rouge(text)
+        lexer = Rouge::Lexers::Ruby.new
+        Rouge::Formatters::Terminal256.new(Rouge::Themes::Base16::Monokai.new).format(lexer.lex(text))
       end
     end
 

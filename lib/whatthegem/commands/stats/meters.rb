@@ -4,9 +4,8 @@ module WhatTheGem
   class Stats
     class Meter < Struct.new(:name, :path, :thresholds, :block)
       def call(gem)
-        dig(gem, *path)
-          &.then(&block)
-          &.then { |val| Metric.new(name, val, *thresholds) }
+        dig(gem, *path)&.then(&block)
+          .then { |val| Metric.new(name, val, *thresholds) }
       end
 
       private
@@ -14,6 +13,8 @@ module WhatTheGem
       def dig(value, first = nil, *rest)
         return value unless first
         case value
+        when nil
+          value
         when ->(v) { first.is_a?(Symbol) && v.respond_to?(first) }
           dig(value.public_send(first), *rest)
         when Hash, Array

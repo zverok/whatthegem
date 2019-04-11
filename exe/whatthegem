@@ -10,5 +10,3 @@ cmd ||= 'info'
 gem = WhatTheGem::Gem.fetch(name)
 
 WhatTheGem::Command.fetch(cmd).call(gem, *args)
-
-# WhatTheGem::Command.fetch(cmd).call(*args)
