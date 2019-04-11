@@ -16,6 +16,10 @@ module WhatTheGem
                 In your bundle: {% if bundled.type == 'notbundled' %}—{% else
       %}{{ bundled.version }} at {{ bundled.dir }}{% endif %}
       {% endunless %}
+
+      Try also:
+      {% for command in commands %}
+        `whatthegem {{info.name}} {{command.handle}}` -- {{command.description}}{% endfor %}
     INFO
 
     def locals
@@ -24,7 +28,8 @@ module WhatTheGem
         age: age,
         specs: specs,
         current: specs.last,
-        bundled: gem.bundled.to_h
+        bundled: gem.bundled.to_h,
+        commands: commands
       }
     end
 
@@ -44,6 +49,10 @@ module WhatTheGem
           dir: spec.gem_dir
         }
       }
+    end
+
+    def commands
+      Command.registry.values.-([self.class]).map(&:meta).map(&:to_h)
     end
   end
 end
