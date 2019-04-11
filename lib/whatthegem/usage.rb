@@ -7,7 +7,7 @@ module WhatTheGem
   # If gem not found locally -- fetch from GitHub
   #
   class Usage < Command
-    register 'usage'
+    register description: 'Gem usage examples'
 
     TEMPLATE = Template.parse(<<~USAGE)
       {% for u in usage %}

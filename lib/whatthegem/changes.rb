@@ -1,6 +1,6 @@
 module WhatTheGem
   class Changes < Command
-    register 'changes'
+    register description: 'Latest gem changes'
 
     VERSION_REGEXP = /^(?:v(?:er(?:sion)?)? ?)?(\d+\.\d+(\.\d+(\.\w+)?)?)(\s|:|$)/i
 
@@ -33,7 +33,7 @@ module WhatTheGem
     end
 
     TEMPLATE = Template.parse(<<~CHANGES)
-      ## Changes since {{ since.description }}
+        _(since {{ since.description }})_
 
       {% for version in versions %}
       ### {{ version.header }}

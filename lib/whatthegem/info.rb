@@ -1,6 +1,6 @@
 module WhatTheGem
   class Info < Command
-    register 'info'
+    register description: 'General information about the gem'
 
     # About info shortening: It is because minitest pastes their whole README
     # there, including a quotations of how they are better than RSpec.

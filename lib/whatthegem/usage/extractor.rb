@@ -53,9 +53,10 @@ module WhatTheGem
 
         def try_sanitize(text)
           text
-            .gsub(/^>> /, '')             # Imitating work from IRB, TODO: various IRB/Pry patterns
-            .gsub(/^(=> )/, '# \\1')      # Output in IRB, should be hidden as comment
-            .gsub(/^( *)(\.{2,})/, '\\1# \\2') # "...and so on..." in code examples
+            .gsub(/^>> /, '')                   # Imitating work from IRB, TODO: various IRB/Pry patterns
+            .gsub(/^(=> )/, '# \\1')            # Output in IRB, should be hidden as comment
+            .gsub(/^(Results: )/, '# \\1')      # Output, in some gems
+            .gsub(/^( *)(\.{2,})/, '\\1# \\2')  # "...and so on..." in code examples
         end
       end
 

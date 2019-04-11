@@ -1,6 +1,6 @@
 module WhatTheGem
   class Stats < Command
-    register 'stats'
+    register description: 'Gem freshness and popularity stats'
 
     def output
       Definitions.meters.map { |meter| meter.call(gem).format }.join("\n")

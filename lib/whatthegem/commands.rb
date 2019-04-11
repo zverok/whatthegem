@@ -3,13 +3,22 @@ require_relative 'tty-markdown_patch'
 
 module WhatTheGem
   class Command
+    Meta = Struct.new(:handle, :title, :description, keyword_init: true)
+
     class << self
       memoize def registry
         {}
       end
 
-      def register(name)
-        Command.registry[name] = self
+      attr_reader :meta
+
+      def register(title: name.split('::').last, handle: title.downcase, description:)
+        Command.registry[handle] = self
+        @meta = Meta.new(
+          handle: handle,
+          title: title,
+          description: description
+        )
       end
 
       def fetch(name)
@@ -30,6 +39,7 @@ module WhatTheGem
       > **{{info.info | paragraphs:1 | reflow }}**
       ({{uris | join:", "}})
 
+      ## {{title}}
 
 
     HEADER
@@ -38,6 +48,10 @@ module WhatTheGem
 
     def initialize(gem)
       @gem = gem
+    end
+
+    def meta
+      self.class.meta
     end
 
     def call
@@ -58,6 +72,7 @@ module WhatTheGem
 
     def header_locals
       {
+        title: meta.title,
         info: gem.rubygems.info,
         uris: guess_uris(gem.rubygems.info),
       }
