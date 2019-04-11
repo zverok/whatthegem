@@ -21,8 +21,8 @@ module WhatTheGem
         )
       end
 
-      def fetch(name)
-        Command.registry.fetch(name)
+      def get(handle)
+        Command.registry[handle]
       end
 
       def call(*args)
@@ -96,4 +96,4 @@ module WhatTheGem
   end
 end
 
-%w[info usage changes stats].each { |f| require_relative(f) }
+%w[info usage changes stats help].each { |f| require_relative(f) }

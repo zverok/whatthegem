@@ -6,7 +6,16 @@ require 'whatthegem'
 
 name, cmd, *args = ARGV
 
+# FIXME: Currently, there is no gem named `help`, but what if it would be?
+# Maybe it is a reserve name?
+if %w[help h --help -h].include?(name) || name.nil?
+  WhatTheGem::Help.call
+  exit
+end
+
 cmd ||= 'info'
 gem = WhatTheGem::Gem.fetch(name)
 
-WhatTheGem::Command.fetch(cmd).call(gem, *args)
+WhatTheGem::Command.get(cmd)
+  .then { |command| command || WhatTheGem::Help }
+  &.call(gem, *args)
