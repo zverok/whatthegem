@@ -6,6 +6,7 @@ module WhatTheGem
       **Usage:** `whatthegem <gemname> [<command>]`
 
       Known commands:
+
       {% for command in commands %}
       * `{{command.handle}}`: {{command.description}}{% endfor %}
     HELP
