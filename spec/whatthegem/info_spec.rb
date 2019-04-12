@@ -1,5 +1,5 @@
 RSpec.describe WhatTheGem::Info do
-  describe '#locals', :vcr do
+  xdescribe '#locals', :vcr do
     subject { ->(gem_name) { described_class.new(WhatTheGem::Gem.new(gem_name)).locals } }
 
     its_call('rubocop') {
