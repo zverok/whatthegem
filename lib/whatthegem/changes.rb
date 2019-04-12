@@ -4,6 +4,8 @@ module WhatTheGem
 
     VERSION_REGEXP = /^(?:v(?:er(?:sion)?)? ?)?(\d+\.\d+(\.\d+(\.\w+)?)?)(\s|:|$)/i
 
+    CHANGELOG_NOT_FOUND = I::Pastel.red.bold("Can't find changelog to extract versions.")
+
     class Version < Struct.new(:number, :header, :body, keyword_init: true)
       def initialize(number:, header:, body:)
         super(number: ::Gem::Version.new(number), header: header, body: body)
@@ -54,6 +56,7 @@ module WhatTheGem
     private
 
     def output
+      return CHANGELOG_NOT_FOUND unless versions
       markdown super
     end
 

@@ -12,6 +12,7 @@ module WhatTheGem
         %{gem ['"]},      # gem install instructions
         'gem install',
         'bundle install',
+        'rake ',
 
         'rails g ',       # rails generator
         'git clone',      # instructions to contribute

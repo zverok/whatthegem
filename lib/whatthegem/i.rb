@@ -1,5 +1,8 @@
 require 'rdoc'
 require 'kramdown'
+require 'pastel'
+
+# Will be necessary when switching to kramdown-2, but tty-markdown doesn't support it yet.
 # require 'kramdown-parser-gfm'
 
 module WhatTheGem
@@ -13,6 +16,8 @@ module WhatTheGem
         proc { |*args| call(*args) }
       end
     end
+
+    Pastel = ::Pastel.new
 
     module Kramdowns
       extend self

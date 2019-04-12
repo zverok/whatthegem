@@ -15,6 +15,8 @@ module WhatTheGem
       {% endfor %}
     USAGE
 
+    README_NOT_FOUND = I::Pastel.red.bold("Can't find `README` locally or in repo to extract usage.")
+
     def locals
       {
         usage: readme.then(&Extractor).first(2).map(&:to_h)
@@ -23,9 +25,13 @@ module WhatTheGem
 
     private
 
-    def readme
-      local_readme || github_readme or fail "README not found"
-      # better?.. "README not found in #{spec.gem_dir}"
+    def output
+      return README_NOT_FOUND unless readme
+      super
+    end
+
+    memoize def readme
+      local_readme || github_readme
     end
 
     def local_readme

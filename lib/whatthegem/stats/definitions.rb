@@ -43,7 +43,7 @@ module WhatTheGem
         :github, :open_issues,
         thresholds: [T.month.decrease(now), T.week.decrease(now)]
       ) { |issues| issues.detect(&HAS_REACTION)&.dig(:updated_at) }
-      metric('Open issues', :github, :closed_issues, :count, &FIFTY_PLUS)
+      metric('Closed issues', :github, :closed_issues, :count, &FIFTY_PLUS)
       metric '...last closed', :github, :closed_issues, 0, :closed_at
     end
   end

@@ -34,10 +34,12 @@ module WhatTheGem
     # there, including a quotations of how they are better than RSpec.
     # (At the same time, RSpec's info reads "BDD for Ruby".)
 
+    # FIXME: It was > **{{ info.info | paragraphs:1 }}** but it looks weird due to tty-markdown
+    # bug: https://github.com/piotrmurach/tty-markdown/issues/11
     HEADER_TEMPLATE = Template.parse(<<~HEADER)
       # {{info.name}}
-      > **{{info.info | paragraphs:1 | reflow }}**
-      ({{uris | join:", "}})
+      > {{info.info | paragraphs:1 }}
+      > ({{uris | join:", "}})
 
       ## {{title}}
 
