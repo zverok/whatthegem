@@ -7,7 +7,7 @@ module WhatTheGem
         level = detect_version_level(nodes) # find level of headers which contain version
 
         sections = sections(nodes, level)
-          .select { |title,| title.match?(VERSION_REGEXP) }
+          .select { |title,| title.match?(VERSION_LINE_REGEXP) }
           .map(&method(:make_version))
           .sort_by(&:number) # it is internally converted to Gem::Version, so "1.12" is correctly > "1.2"
       end
@@ -25,14 +25,14 @@ module WhatTheGem
 
       def detect_version_level(nodes)
         nodes.grep(RDoc::Markup::Heading)
-          .select { |n| n.text.match?(VERSION_REGEXP) }
+          .select { |n| n.text.match?(VERSION_LINE_REGEXP) }
           .map(&:level).min
       end
 
       def make_version((title, nodes))
         # TODO: date, if known
         Version.new(
-          number: title[VERSION_REGEXP, 1],
+          number: title[VERSION_LINE_REGEXP, :version],
           header: title,
           body: nodes.map(&I::RDocs.method(:part2md)).join
         )

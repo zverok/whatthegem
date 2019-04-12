@@ -38,7 +38,7 @@ module WhatTheGem
     # bug: https://github.com/piotrmurach/tty-markdown/issues/11
     HEADER_TEMPLATE = Template.parse(<<~HEADER)
       # {{info.name}}
-      > {{info.info | paragraphs:1 }}
+      > {{info.info | paragraphs:1 | reflow }}
       > ({{uris | join:", "}})
 
       ## {{title}}

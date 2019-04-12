@@ -5,7 +5,8 @@ module WhatTheGem
   class Template < Liquid::Template
     module Filters
       def paragraphs(text, num)
-        text.split("\n\n").first(num).join("\n\n").gsub(/\n +/, "\n").strip
+        # split on markdown-alike paragraph break (\n\n), or "paragraph, then list" (\n* )
+        text.split(/\n(?:\n|(?= *\*))/).first(num).join("\n\n").gsub(/\n +/, "\n").strip
       end
 
       def reflow(text)

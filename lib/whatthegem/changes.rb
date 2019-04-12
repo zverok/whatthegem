@@ -2,7 +2,8 @@ module WhatTheGem
   class Changes < Command
     register description: 'Latest gem changes'
 
-    VERSION_REGEXP = /^(?:v(?:er(?:sion)?)? ?)?(\d+\.\d+(\.\d+(\.\w+)?)?)(\s|:|$)/i
+    VERSION_REGEXP = '(v(er(sion)?)? ?)?(?<version>\d+\.\d+(\.\d+(\.\w+)?)?)'
+    VERSION_LINE_REGEXP = /(^#{VERSION_REGEXP}(\s|:|$)|\s#{VERSION_REGEXP}$)/i
 
     CHANGELOG_NOT_FOUND = I::Pastel.red.bold("Can't find changelog to extract versions.")
 

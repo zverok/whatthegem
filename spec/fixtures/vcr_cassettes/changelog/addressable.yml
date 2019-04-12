@@ -1,0 +1,246 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/addressable.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Gems 1.1.1
+      - Ruby
+      Authorization:
+      - 6afb342e528a1f624b7bac0da9cb9a1d
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - '30'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'self'; script-src 'self' https://secure.gaug.es https://www.fastly-insights.com;
+        style-src 'self' https://fonts.googleapis.com; img-src 'self' https://secure.gaug.es
+        https://gravatar.com https://secure.gravatar.com https://*.fastly-insights.com;
+        font-src 'self' https://fonts.gstatic.com; connect-src https://s3-us-west-2.amazonaws.com/rubygems-dumps/
+        https://*.fastly-insights.com https://api.github.com;
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8d39a21b-351f-49e4-885a-3d172e2bda15
+      X-Runtime:
+      - '0.017470'
+      Strict-Transport-Security:
+      - max-age=0; includeSubDomains
+      X-Backend:
+      - F_Rails 54.186.104.15:443
+      Accept-Ranges:
+      - bytes
+      - bytes
+      Age:
+      - '0'
+      - '0'
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 12 Apr 2019 21:29:45 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-hhn1545-HHN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1555104585.957389,VS0,VE197
+      Vary:
+      - Accept-Encoding,Fastly-SSL
+      Etag:
+      - '"2ee6cfe49b0c395cfee08a644ab6d401"'
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"addressable","downloads":145601932,"version":"2.6.0","version_downloads":5049874,"platform":"ruby","authors":"Bob
+        Aman","info":"Addressable is a replacement for the URI implementation that
+        is part of\nRuby''s standard library. It more closely conforms to the relevant
+        RFCs and\nadds support for IRIs and URI templates.\n","licenses":["Apache-2.0"],"metadata":{},"yanked":false,"sha":"d490ad06dfc421503e659a12597d6bb0273b5cd7ff2789a1ec27210b1914952d","project_uri":"https://rubygems.org/gems/addressable","gem_uri":"https://rubygems.org/gems/addressable-2.6.0.gem","homepage_uri":"https://github.com/sporkmonger/addressable","wiki_uri":"http://wiki.github.com/sporkmonger/addressable/","documentation_uri":"http://rubydoc.info/gems/addressable","mailing_list_uri":"","source_code_uri":"http://github.com/sporkmonger/addressable","bug_tracker_uri":"http://github.com/sporkmonger/addressable/issues","changelog_uri":null,"dependencies":{"development":[{"name":"bundler","requirements":"\u003e=
+        1.0, \u003c 3.0"}],"runtime":[{"name":"public_suffix","requirements":"\u003e=
+        2.0.2, \u003c 4.0"}]}}'
+    http_version: 
+  recorded_at: Fri, 12 Apr 2019 21:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/sporkmonger/addressable/contents/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Fri, 12 Apr 2019 21:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '59'
+      X-Ratelimit-Reset:
+      - '1555108185'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      Etag:
+      - W/"95262a33399994cfbb47227cb01305339180ae3e"
+      Last-Modified:
+      - Wed, 10 Apr 2019 01:42:05 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - C126:7397:70C887:E081EE:5CB10349
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"name":".gitignore","path":".gitignore","sha":"874e3a0b8b68d676212a9e049d1f509a65693dd8","size":89,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/.gitignore?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/.gitignore","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/874e3a0b8b68d676212a9e049d1f509a65693dd8","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/.gitignore","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/.gitignore?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/874e3a0b8b68d676212a9e049d1f509a65693dd8","html":"https://github.com/sporkmonger/addressable/blob/master/.gitignore"}},{"name":".simplecov","path":".simplecov","sha":"9aadd3af0a51a61c6f8a5626f8e29758892337df","size":193,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/.simplecov?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/.simplecov","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/9aadd3af0a51a61c6f8a5626f8e29758892337df","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/.simplecov","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/.simplecov?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/9aadd3af0a51a61c6f8a5626f8e29758892337df","html":"https://github.com/sporkmonger/addressable/blob/master/.simplecov"}},{"name":".travis.yml","path":".travis.yml","sha":"a06f34f21b92a2d287e6c0a3a31ae4bfe2c4afbc","size":507,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/.travis.yml?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/.travis.yml","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/a06f34f21b92a2d287e6c0a3a31ae4bfe2c4afbc","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/.travis.yml","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/.travis.yml?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/a06f34f21b92a2d287e6c0a3a31ae4bfe2c4afbc","html":"https://github.com/sporkmonger/addressable/blob/master/.travis.yml"}},{"name":".yardopts","path":".yardopts","sha":"154d1e027197ba9f025e695c0d27f3dcaff261b8","size":28,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/.yardopts?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/.yardopts","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/154d1e027197ba9f025e695c0d27f3dcaff261b8","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/.yardopts","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/.yardopts?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/154d1e027197ba9f025e695c0d27f3dcaff261b8","html":"https://github.com/sporkmonger/addressable/blob/master/.yardopts"}},{"name":"CHANGELOG.md","path":"CHANGELOG.md","sha":"90531e1f1ffef614bfed0954c1b34ccf2b30ad58","size":8372,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/CHANGELOG.md?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/CHANGELOG.md","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/90531e1f1ffef614bfed0954c1b34ccf2b30ad58","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/CHANGELOG.md","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/CHANGELOG.md?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/90531e1f1ffef614bfed0954c1b34ccf2b30ad58","html":"https://github.com/sporkmonger/addressable/blob/master/CHANGELOG.md"}},{"name":"Gemfile","path":"Gemfile","sha":"9ca55cabf67c72b30669a8a2e9abf8492e884573","size":769,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/Gemfile?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/Gemfile","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/9ca55cabf67c72b30669a8a2e9abf8492e884573","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/Gemfile","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/Gemfile?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/9ca55cabf67c72b30669a8a2e9abf8492e884573","html":"https://github.com/sporkmonger/addressable/blob/master/Gemfile"}},{"name":"LICENSE.txt","path":"LICENSE.txt","sha":"ef51da2b0e8df139a427a56d3c2054c1b5e75118","size":10851,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/LICENSE.txt?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/LICENSE.txt","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/ef51da2b0e8df139a427a56d3c2054c1b5e75118","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/LICENSE.txt","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/LICENSE.txt?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/ef51da2b0e8df139a427a56d3c2054c1b5e75118","html":"https://github.com/sporkmonger/addressable/blob/master/LICENSE.txt"}},{"name":"README.md","path":"README.md","sha":"48a53fb71e12a44dd847a634c666ea8e4cdb5875","size":3239,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/README.md?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/README.md","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/48a53fb71e12a44dd847a634c666ea8e4cdb5875","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/README.md","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/README.md?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/48a53fb71e12a44dd847a634c666ea8e4cdb5875","html":"https://github.com/sporkmonger/addressable/blob/master/README.md"}},{"name":"Rakefile","path":"Rakefile","sha":"64b9deace505f33061477e18990c7e37f0441a1a","size":1052,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/Rakefile?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/Rakefile","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/64b9deace505f33061477e18990c7e37f0441a1a","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/Rakefile","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/Rakefile?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/64b9deace505f33061477e18990c7e37f0441a1a","html":"https://github.com/sporkmonger/addressable/blob/master/Rakefile"}},{"name":"addressable.gemspec","path":"addressable.gemspec","sha":"83936c1b5523603ac7ff2820f8486e1efb0a86ed","size":2172,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/addressable.gemspec?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/addressable.gemspec","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/83936c1b5523603ac7ff2820f8486e1efb0a86ed","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/addressable.gemspec","type":"file","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/addressable.gemspec?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/83936c1b5523603ac7ff2820f8486e1efb0a86ed","html":"https://github.com/sporkmonger/addressable/blob/master/addressable.gemspec"}},{"name":"benchmark","path":"benchmark","sha":"715422bc0ff36fce899ac21395eea5340ff141d4","size":0,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/benchmark?ref=master","html_url":"https://github.com/sporkmonger/addressable/tree/master/benchmark","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/trees/715422bc0ff36fce899ac21395eea5340ff141d4","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/benchmark?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/trees/715422bc0ff36fce899ac21395eea5340ff141d4","html":"https://github.com/sporkmonger/addressable/tree/master/benchmark"}},{"name":"data","path":"data","sha":"59aa24141d10557225b96ece936ed2306b3cb8b8","size":0,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/data?ref=master","html_url":"https://github.com/sporkmonger/addressable/tree/master/data","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/trees/59aa24141d10557225b96ece936ed2306b3cb8b8","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/data?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/trees/59aa24141d10557225b96ece936ed2306b3cb8b8","html":"https://github.com/sporkmonger/addressable/tree/master/data"}},{"name":"gemfiles","path":"gemfiles","sha":"ff2a4d2942661b260cc4b0a08d3d31b84e6bf11d","size":0,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/gemfiles?ref=master","html_url":"https://github.com/sporkmonger/addressable/tree/master/gemfiles","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/trees/ff2a4d2942661b260cc4b0a08d3d31b84e6bf11d","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/gemfiles?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/trees/ff2a4d2942661b260cc4b0a08d3d31b84e6bf11d","html":"https://github.com/sporkmonger/addressable/tree/master/gemfiles"}},{"name":"lib","path":"lib","sha":"1d63713bb9f37f9b3c80ec51739ddbddf8365548","size":0,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/lib?ref=master","html_url":"https://github.com/sporkmonger/addressable/tree/master/lib","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/trees/1d63713bb9f37f9b3c80ec51739ddbddf8365548","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/lib?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/trees/1d63713bb9f37f9b3c80ec51739ddbddf8365548","html":"https://github.com/sporkmonger/addressable/tree/master/lib"}},{"name":"spec","path":"spec","sha":"b9f5e6f85bc2050d3a5325c081343b363912179e","size":0,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/spec?ref=master","html_url":"https://github.com/sporkmonger/addressable/tree/master/spec","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/trees/b9f5e6f85bc2050d3a5325c081343b363912179e","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/spec?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/trees/b9f5e6f85bc2050d3a5325c081343b363912179e","html":"https://github.com/sporkmonger/addressable/tree/master/spec"}},{"name":"tasks","path":"tasks","sha":"5be39d1043e4d0e1394729f720ab1e2b852e8aa5","size":0,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/tasks?ref=master","html_url":"https://github.com/sporkmonger/addressable/tree/master/tasks","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/trees/5be39d1043e4d0e1394729f720ab1e2b852e8aa5","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/tasks?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/trees/5be39d1043e4d0e1394729f720ab1e2b852e8aa5","html":"https://github.com/sporkmonger/addressable/tree/master/tasks"}}]'
+    http_version: 
+  recorded_at: Fri, 12 Apr 2019 21:29:46 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/sporkmonger/addressable/contents/CHANGELOG.md
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.14.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Fri, 12 Apr 2019 21:29:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '58'
+      X-Ratelimit-Reset:
+      - '1555108185'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      Etag:
+      - W/"90531e1f1ffef614bfed0954c1b34ccf2b30ad58"
+      Last-Modified:
+      - Mon, 01 Apr 2019 11:34:19 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - 990E:6EF4:35BA54:837CAB:5CB1034A
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"CHANGELOG.md","path":"CHANGELOG.md","sha":"90531e1f1ffef614bfed0954c1b34ccf2b30ad58","size":8372,"url":"https://api.github.com/repos/sporkmonger/addressable/contents/CHANGELOG.md?ref=master","html_url":"https://github.com/sporkmonger/addressable/blob/master/CHANGELOG.md","git_url":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/90531e1f1ffef614bfed0954c1b34ccf2b30ad58","download_url":"https://raw.githubusercontent.com/sporkmonger/addressable/master/CHANGELOG.md","type":"file","content":"IyBBZGRyZXNzYWJsZSAyLjYuMAotIGFkZGVkIGB0bGQ9YCBtZXRob2QgdG8g\nYWxsb3cgYXNzaWdubWVudCB0byB0aGUgcHVibGljIHN1ZmZpeAotIG1vc3Qg\nYGhldXJpc3RpY19wYXJzZWAgcGF0dGVybnMgYXJlIG5vdyBjYXNlLWluc2Vu\nc2l0aXZlCi0gYGhldXJpc3RpY19wYXJzZWAgaGFuZGxlcyBtb3JlIGBmaWxl\nOi8vYCBVUkkgdmFyaWF0aW9ucwotIGZpeGVzIGJ1ZyBpbiBgaGV1cmlzdGlj\nX3BhcnNlYCB3aGVuIHVyaSBzdGFydHMgd2l0aCBkaWdpdAotIGZpeGVzIGJ1\nZyBpbiBgcmVxdWVzdF91cmk9YCB3aXRoIHF1ZXJ5IHN0cmluZ3MKLSBmaXhl\ncyB0ZW1wbGF0ZSBpc3N1ZXMgd2l0aCBgbmlsYCBhbmQgYD9gIG9wZXJhdG9y\nCi0gYGZyb3plbl9zdHJpbmdfbGl0ZXJhbGAgcHJhZ21hcyBhZGRlZAotIG1p\nbm9yIHBlcmZvcm1hbmNlIGltcHJvdmVtZW50cyBpbiByZWdleHBzCi0gZml4\nZXMgdG8gZWxpbWluYXRlIHdhcm5pbmdzCgojIEFkZHJlc3NhYmxlIDIuNS4y\nCi0gYmV0dGVyIHN1cHBvcnQgZm9yIGZyb3plbiBzdHJpbmcgbGl0ZXJhbHMK\nLSBmaXhlZCBidWcgdy8gdXBwZXJjYXNlIGNoYXJhY3RlcnMgaW4gc2NoZW1l\nCi0gSUROQSBlcnJvcnMgdy8gZW1vamkgVVJMcwotIGNvbXBhdGliaWxpdHkg\ndy8gcHVibGljX3N1ZmZpeCAzLngKCiMgQWRkcmVzc2FibGUgMi41LjEKLSBh\nbGxvdyB1bmljb2RlIG5vcm1hbGl6YXRpb24gdG8gYmUgZGlzYWJsZWQgZm9y\nIFVSSSBUZW1wbGF0ZSBleHBhbnNpb24KLSByZW1vdmVkIGR1cGxpY2F0ZSB0\nZXN0CgojIEFkZHJlc3NhYmxlIDIuNS4wCi0gZHJvcHBpbmcgc3VwcG9ydCBm\nb3IgUnVieSAxLjkKLSBhZGRpbmcgc3VwcG9ydCBmb3IgUnVieSAyLjQgcHJl\ndmlldwotIGFkZCBzdXBwb3J0IGZvciBwdWJsaWMgc3VmZml4ZXMgYW5kIHRs\nZDsgZmlyc3QgcnVudGltZSBkZXBlbmRlbmN5Ci0gaG9zdG5hbWUgZXNjYXBp\nbmcgc2hvdWxkIG1hdGNoIFJGQzsgdW5kZXJzY29yZXMgaW4gaG9zdG5hbWVz\nIG5vIGxvbmdlciBlc2NhcGVkCi0gcGF0aHMgYmVnaW5uaW5nIHdpdGggLy8g\nYW5kIG1pc3NpbmcgYW4gYXV0aG9yaXR5IGFyZSBub3cgY29uc2lkZXJlZCBp\nbnZhbGlkCi0gdmFsaWRhdGlvbiBub3cgYWxzbyB0YWtlcyBwbGFjZSBhZnRl\nciBzZXR0aW5nIGEgcGF0aAotIGhhbmRsZSBiYWNrc2xhc2hlcyBpbiBhdXRo\nb3JpdHkgbW9yZSBsaWtlIGEgYnJvd3NlciBmb3IgYGhldXJpc3RpY19wYXJz\nZWAKLSB1bmVzY2FwZWQgYmFja3NsYXNoZXMgaW4gaG9zdCBub3cgcmFpc2Ug\nYW4gYEludmFsaWRVUklFcnJvcmAKLSBgbWVyZ2UhYCwgYGpvaW4hYCwgYG9t\naXQhYCBhbmQgYG5vcm1hbGl6ZSFgIGRvbid0IGRpc2FibGUgZGVmZXJyZWQg\ndmFsaWRhdGlvbgotIGBoZXVyaXN0aWNfcGFyc2VgIG5vdyB0cmltcyB3aGl0\nZXNwYWNlIGJlZm9yZSBwYXJzaW5nCi0gaG9zdCBwYXJ0cyBsb25nZXIgdGhh\nbiA2MyBieXRlcyB3aWxsIGJlIGlnbm9yZWQgYW5kIG5vdCBwYXNzZWQgdG8g\nbGliaWRuCi0gbm9ybWFsaXplZCB2YWx1ZXMgYWx3YXlzIGVuY29kZWQgYXMg\nVVRGLTgKCiMgQWRkcmVzc2FibGUgMi40LjAKLSBzdXBwb3J0IGZvciAxLjgu\neCBkcm9wcGVkCi0gZG91YmxlIHF1b3RlcyBpbiBhIGhvc3Qgbm93IHJhaXNl\ncyBhbiBlcnJvcgotIG5ld2xpbmVzIGluIGhvc3Qgd2lsbCBubyBsb25nZXIg\nZ2V0IHVuZXNjYXBlZCBkdXJpbmcgbm9ybWFsaXphdGlvbgotIHN0cmljdGVy\nIGhhbmRsaW5nIG9mIGJvZ3VzIHNjaGVtZSB2YWx1ZXMKLSBzdHJpY3RlciBo\nYW5kbGluZyBvZiBlbmNvZGVkIHBvcnQgdmFsdWVzCi0gY2FsbGluZyBgcmVx\ndWlyZSAnYWRkcmVzc2FibGUnYCB3aWxsIG5vdyBsb2FkIGJvdGggdGhlIFVS\nSSBhbmQgVGVtcGxhdGUgZmlsZXMKLSBhc3NpZ25pbmcgdG8gdGhlIGBob3N0\nbmFtZWAgY29tcG9uZW50IHdpdGggYW4gYElQQWRkcmAgb2JqZWN0IGlzIG5v\ndyBzdXBwb3J0ZWQKLSBhc3NpZ25pbmcgdG8gdGhlIGBvcmlnaW5gIGNvbXBv\nbmVudCBpcyBub3cgc3VwcG9ydGVkCi0gZml4ZWQgbWlub3IgYnVnIHdoZXJl\nIGFuIGV4Y2VwdGlvbiB3b3VsZCBiZSB0aHJvd24gZm9yIGEgbWlzc2luZyBB\nQ0Ugc3VmZml4Ci0gYmV0dGVyIHBhcnRpYWwgZXhwYW5zaW9uIG9mIFVSSSB0\nZW1wbGF0ZXMKCiMgQWRkcmVzc2FibGUgMi4zLjgKLSBmaXggd2FybmluZ3MK\nLSB1cGRhdGUgZGVwZW5kZW5jeSBnZW1zCi0gc3VwcG9ydCBmb3IgMS44Lngg\nb2ZmaWNpYWxseSBkZXByZWNhdGVkCgojIEFkZHJlc3NhYmxlIDIuMy43Ci0g\nZml4IHNjZW5hcmlvIGluIHdoaWNoIGludmFsaWQgVVJJcyBkb24ndCBnZXQg\nYW4gZXhjZXB0aW9uIHVudGlsIGluc3BlY3RlZAotIGhhbmRsZSBob3N0bmFt\nZXMgd2l0aCB0d28gYWRqYWNlbnQgcGVyaW9kcyBjb3JyZWN0bHkKLSB1cGdy\nYWRlIG9mIFJTcGVjCgojIEFkZHJlc3NhYmxlIDIuMy42Ci0gbm9ybWFsaXph\ndGlvbiBkcm9wcyBlbXB0eSBxdWVyeSBzdHJpbmcKLSBiZXR0ZXIgaGFuZGxp\nbmcgaW4gdGVtcGxhdGUgZXh0cmFjdCBmb3IgbWlzc2luZyB2YWx1ZXMKLSB0\nZW1wbGF0ZSBtb2RpZmllciBmb3IgYCc/J2Agbm93IHRyZWF0ZWQgYXMgb3B0\naW9uYWwKLSBmaXhlZCBpc3N1ZSB3aGVyZSBjaGFyYWN0ZXIgY2xhc3MgcGFy\nYW1ldGVycyB3ZXJlIG1vZGlmaWVkCi0gdGVtcGxhdGVzIGNhbiBub3cgYmUg\ndGVzdGVkIGZvciBlcXVhbGl0eQotIGFkZGVkIGA6c29ydGVkYCBvcHRpb24g\ndG8gbm9ybWFsaXphdGlvbiBvZiBxdWVyeSBzdHJpbmdzCi0gZml4ZWQgaXNz\ndWUgd2l0aCBub3JtYWxpemF0aW9uIG9mIGhvc3RzIGdpdmVuIGluIGAnZXhh\nbXBsZS5jb20uJ2AgZm9ybQoKIyBBZGRyZXNzYWJsZSAyLjMuNQotIGFkZGVk\nIEFkZHJlc3NhYmxlOjpVUkkjZW1wdHk/IG1ldGhvZAotIEFkZHJlc3NhYmxl\nOjpVUkkjaG9zdG5hbWUgbWV0aG9kcyBub3cgc3RyaXAgc3F1YXJlIGJyYWNr\nZXRzIGZyb20gSVB2NiBob3N0cwotIGNvbXBhdGliaWxpdHkgd2l0aCBOZXQ6\nOkhUVFAgaW4gUnVieSAyLjAuMAotIEFkZHJlc3NhYmxlOjpVUkkjcm91dGVf\nZnJvbSBzaG91bGQgYWx3YXlzIGdpdmUgcmVsYXRpdmUgVVJJcwoKIyBBZGRy\nZXNzYWJsZSAyLjMuNAotIGZpeGVkIGlzc3VlIHdpdGggZW5jb2RpbmcgYWx0\nZXJpbmcgaXRzIGlucHV0cwotIHF1ZXJ5IHN0cmluZyBub3JtYWxpemF0aW9u\nIG5vdyBsZWF2ZXMgJzsnIGNoYXJhY3RlcnMgYWxvbmUKLSBGYWtlRlMgaXMg\nZGV0ZWN0ZWQgYmVmb3JlIGF0dGVtcHRpbmcgdG8gbG9hZCB1bmljb2RlIHRh\nYmxlcwotIGFkZGl0aW9uYWwgdGVzdGluZyB0byBlbnN1cmUgZnJvemVuIG9i\namVjdHMgZG9uJ3QgY2F1c2UgcHJvYmxlbXMKCiMgQWRkcmVzc2FibGUgMi4z\nLjMKLSBmaXhlZCBpc3N1ZSB3aXRoIGNvbnZlcnRpbmcgY29tbW9uIHByaW1p\ndGl2ZXMgZHVyaW5nIHRlbXBsYXRlIGV4cGFuc2lvbgotIGZpeGVkIHBvcnQg\nZW5jb2RpbmcgaXNzdWUKLSByZW1vdmVkIGEgZmV3IHdhcm5pbmdzCi0gbm9y\nbWFsaXplIHNob3VsZCBub3cgaWdub3JlICUyQiBpbiBxdWVyeSBzdHJpbmdz\nCi0gdGhlIElETkEgbG9naWMgc2hvdWxkIG5vdyBiZSBoYW5kbGVkIGJ5IGxp\nYmlkbiBpbiBSdWJ5IDEuOQotIG5vIHRlbXBsYXRlIG1hdGNoIHNob3VsZCBu\nb3cgcmVzdWx0IGluIG5pbCBpbnN0ZWFkIG9mIGFuIGVtcHR5IE1hdGNoRGF0\nYQotIGFkZGVkIGxpY2Vuc2UgaW5mb3JtYXRpb24gdG8gZ2Vtc3BlYwoKIyBB\nZGRyZXNzYWJsZSAyLjMuMgotIGFkZGVkIEFkZHJlc3NhYmxlOjpVUkkjZGVm\nYXVsdF9wb3J0IG1ldGhvZAotIGZpeGVkIGlzc3VlIHdpdGggTWFyc2hhbGxp\nbmcgVW5pY29kZSBkYXRhIG9uIFdpbmRvd3MKLSBpbXByb3ZlZCBoZXVyaXN0\naWMgcGFyc2luZyB0byBiZXR0ZXIgaGFuZGxlIElQdjQgYWRkcmVzc2VzCgoj\nIEFkZHJlc3NhYmxlIDIuMy4xCi0gZml4ZWQgbWlzc2luZyB1bmljb2RlIGRh\ndGEgZmlsZQoKIyBBZGRyZXNzYWJsZSAyLjMuMAotIHVwZGF0ZWQgQWRkcmVz\nc2FibGU6OlRlbXBsYXRlIHRvIHVzZSBSRkMgNjU3MCwgbGV2ZWwgNAotIGZp\neGVkIGNvbXBhdGliaWxpdHkgcHJvYmxlbXMgd2l0aCBzb21lIHZlcnNpb25z\nIG9mIFJ1YnkKLSBtb3ZlZCB1bmljb2RlIHRhYmxlcyBpbnRvIGEgZGF0YSBm\naWxlIGZvciBwZXJmb3JtYW5jZSByZWFzb25zCi0gcmVtb3Zpbmcgc3VwcG9y\ndCBmb3IgbXVsdGlwbGUgcXVlcnkgdmFsdWUgbm90YXRpb25zCgojIEFkZHJl\nc3NhYmxlIDIuMi44Ci0gZml4ZWQgaXNzdWVzIHdpdGggZG90IHNlZ21lbnQg\ncmVtb3ZhbCBjb2RlCi0gZm9ybSBlbmNvZGluZyBjYW4gbm93IGhhbmRsZSBt\ndWx0aXBsZSB2YWx1ZXMgcGVyIGtleQotIHVwZGF0ZWQgZGV2ZWxvcG1lbnQg\nZW52aXJvbm1lbnQKCiMgQWRkcmVzc2FibGUgMi4yLjcKLSBmaXhlZCBpc3N1\nZXMgcmVsYXRlZCB0byBBZGRyZXNzYWJsZTo6VVJJI3F1ZXJ5X3ZhbHVlcz0K\nLSB0aGUgQWRkcmVzc2FibGU6OlVSSS5wYXJzZSBtZXRob2QgaXMgbm93IHBv\nbHltb3JwaGljCgojIEFkZHJlc3NhYmxlIDIuMi42Ci0gY2hhbmdlZCB0aGUg\nd2F5IGFtYmlndW91cyBwYXRocyBhcmUgaGFuZGxlZAotIGZpeGVkIGJ1ZyB3\naXRoIGZyb3plbiBVUklzCi0gaHR0cHMgc3VwcG9ydGVkIGluIGhldXJpc3Rp\nYyBwYXJzaW5nCgojIEFkZHJlc3NhYmxlIDIuMi41Ci0gJ3BhcnNpbmcnIGEg\ncHJlLXBhcnNlZCBVUkkgb2JqZWN0IGlzIG5vdyBhIGR1cCBvcGVyYXRpb24K\nLSBpbnRyb2R1Y2VkIGNvbmRpdGlvbmFsIHN1cHBvcnQgZm9yIGxpYmlkbgot\nIGZpeGVkIG5vcm1hbGl6YXRpb24gaXNzdWUgb24gYW1wZXJzYW5kcyBpbiBx\ndWVyeSBzdHJpbmdzCi0gYWRkZWQgYWRkaXRpb25hbCB0ZXN0cyBhcm91bmQg\naGFuZGxpbmcgb2YgcXVlcnkgc3RyaW5ncwoKIyBBZGRyZXNzYWJsZSAyLjIu\nNAotIGFkZGVkIG9yaWdpbiBzdXBwb3J0IGZyb20gZHJhZnQtaWV0Zi13ZWJz\nZWMtb3JpZ2luLTAwCi0gcmVzb2x2ZWQgaXNzdWUgd2l0aCBhdHRlbXB0aW5n\nIHRvIG5hdmlnYXRlIGJlbG93IHJvb3QKLSBmaXhlZCBidWcgd2l0aCBzdHJp\nbmcgc3BsaXR0aW5nIGluIHF1ZXJ5IHN0cmluZ3MKCiMgQWRkcmVzc2FibGUg\nMi4yLjMKLSBhZGRlZCA6ZmxhdF9hcnJheSBub3RhdGlvbiBmb3IgcXVlcnkg\nc3RyaW5ncwoKIyBBZGRyZXNzYWJsZSAyLjIuMgotIGZpeGVkIGlzc3VlIHdp\ndGggcGVyY2VudCBlc2NhcGluZyBvZiAnKycgY2hhcmFjdGVyIGluIHF1ZXJ5\nIHN0cmluZ3MKCiMgQWRkcmVzc2FibGUgMi4yLjEKLSBhZGRlZCBzdXBwb3J0\nIGZvciBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQuCgojIEFk\nZHJlc3NhYmxlIDIuMi4wCi0gYWRkZWQgc2l0ZSBtZXRob2RzCi0gaW1wcm92\nZWQgZG9jdW1lbnRhdGlvbgoKIyBBZGRyZXNzYWJsZSAyLjEuMgotIGFkZGVk\nIEhUVFAgcmVxdWVzdCBVUkkgbWV0aG9kcwotIGJldHRlciBoYW5kbGluZyBv\nZiBXaW5kb3dzIGZpbGUgcGF0aHMKLSB2YWxpZGF0aW9uX2RlZmVycmVkIGJv\nb2xlYW4gcmVwbGFjZWQgd2l0aCBkZWZlcl92YWxpZGF0aW9uIGJsb2NrCi0g\nbm9ybWFsaXphdGlvbiBvZiBwZXJjZW50LWVuY29kZWQgcGF0aHMgc2hvdWxk\nIG5vdyBiZSBjb3JyZWN0Ci0gZml4ZWQgaXNzdWUgd2l0aCBjb25zdHJ1Y3Rp\nbmcgVVJJcyB3aXRoIHJlbGF0aXZlIHBhdGhzCi0gZml4ZWQgd2FybmluZ3MK\nCiMgQWRkcmVzc2FibGUgMi4xLjEKLSBtb3JlIHR5cGUgY2hlY2tpbmcgY2hh\nbmdlcwotIGZpeGVkIGlzc3VlIHdpdGggdW5pY29kZSBub3JtYWxpemF0aW9u\nCi0gYWRkZWQgbWV0aG9kIHRvIGZpbmQgdGVtcGxhdGUgZGVmYXVsdHMKLSBz\neW1ib2xpYyBrZXlzIGFyZSBub3cgYWxsb3dlZCBpbiB0ZW1wbGF0ZSBtYXBw\naW5ncwotIG51bWVyaWMgdmFsdWVzIGFuZCBzeW1ib2xpYyB2YWx1ZXMgYXJl\nIG5vdyBhbGxvd2VkIGluIHRlbXBsYXRlIG1hcHBpbmdzCgojIEFkZHJlc3Nh\nYmxlIDIuMS4wCi0gcmVmYWN0b3JlZCBVUkkgdGVtcGxhdGUgc3VwcG9ydCBv\ndXQgaW50byBpdHMgb3duIGNsYXNzCi0gcmVtb3ZlZCBleHRyYWN0IG1ldGhv\nZCBkdWUgdG8gYmVpbmcgdXNlbGVzcyBhbmQgdW5yZWxpYWJsZQotIHJlbW92\nZWQgQWRkcmVzc2FibGU6OlVSSS5leHBhbmRfdGVtcGxhdGUKLSByZW1vdmVk\nIEFkZHJlc3NhYmxlOjpVUkkjZXh0cmFjdF9tYXBwaW5nCi0gYWRkZWQgcGFy\ndGlhbCB0ZW1wbGF0ZSBleHBhbnNpb24KLSBmaXhlZCBtaW5vciBidWdzIGlu\nIHRoZSBwYXJzZSBhbmQgaGV1cmlzdGljX3BhcnNlIG1ldGhvZHMKLSBmaXhl\nZCBpbmNvbXBhdGliaWxpdHkgd2l0aCBSdWJ5IDEuOS4xCi0gZml4ZWQgYm90\ndGxlbmVjayBpbiBBZGRyZXNzYWJsZTo6VVJJI2hhc2ggYW5kIEFkZHJlc3Nh\nYmxlOjpVUkkjdG9fcwotIGZpeGVkIHVuaWNvZGUgbm9ybWFsaXphdGlvbiBl\neGNlcHRpb24KLSB1cGRhdGVkIHF1ZXJ5X3ZhbHVlcyBtZXRob2RzIHRvIGJl\ndHRlciBoYW5kbGUgc3Vic2NyaXB0IG5vdGF0aW9uCi0gd29ya2VkIGFyb3Vu\nZCBpc3N1ZSB3aXRoIGZyZWV6aW5nIFVSSXMKLSBpbXByb3ZlZCBzcGVjcwoK\nIyBBZGRyZXNzYWJsZSAyLjAuMgotIGZpeGVkIGlzc3VlIHdpdGggVVJJIHRl\nbXBsYXRlIGV4cGFuc2lvbgotIGZpeGVkIGlzc3VlIHdpdGggcGVyY2VudCBl\nc2NhcGluZyBjaGFyYWN0ZXJzIDAtMTUKCiMgQWRkcmVzc2FibGUgMi4wLjEK\nLSBmaXhlZCBpc3N1ZSB3aXRoIHF1ZXJ5IHN0cmluZyBhc3NpZ25tZW50Ci0g\nZml4ZWQgaXNzdWUgd2l0aCBpbXByb3Blcmx5IGVuY29kZWQgY29tcG9uZW50\ncwoKIyBBZGRyZXNzYWJsZSAyLjAuMAotIHRoZSBpbml0aWFsaXplIG1ldGhv\nZCBub3cgdGFrZXMgYW4gb3B0aW9ucyBoYXNoIGFzIGl0cyBvbmx5IHBhcmFt\nZXRlcgotIGFkZGVkIHF1ZXJ5X3ZhbHVlcyBtZXRob2QgdG8gVVJJIGNsYXNz\nCi0gY29tcGxldGVseSByZXBsYWNlZCBJRE5BIGltcGxlbWVudGF0aW9uIHdp\ndGggcHVyZSBSdWJ5Ci0gcmVuYW1lZCBBZGRyZXNzYWJsZTo6QUREUkVTU0FC\nTEVfVkVSU0lPTiB0byBBZGRyZXNzYWJsZTo6VkVSU0lPTgotIGNvbXBsZXRl\nbHkgcmV3b3JrZWQgdGhlIFJha2VmaWxlCi0gY2hhbmdlZCB0aGUgYmVoYXZp\nb3Igb2YgdGhlIHBvcnQgbWV0aG9kIHNpZ25pZmljYW50bHkKLSBBZGRyZXNz\nYWJsZTo6VVJJLmVuY29kZV9zZWdtZW50LCBBZGRyZXNzYWJsZTo6VVJJLnVu\nZW5jb2RlX3NlZ21lbnQgcmVuYW1lZAotIGRvY3VtZW50YXRpb24gaXMgbm93\nIGluIFlBUkQgZm9ybWF0Ci0gbW9yZSByaWdvcm91cyB0eXBlIGNoZWNraW5n\nCi0gdG9fc3RyIG1ldGhvZCBpbXBsZW1lbnRlZCwgaW1wbGljaXQgY29udmVy\nc2lvbiB0byBTdHJpbmdzIG5vdyBhbGxvd2VkCi0gQWRkcmVzc2FibGU6OlVS\nSSNvbWl0IG1ldGhvZCBhZGRlZCwgQWRkcmVzc2FibGU6OlVSSSNtZXJnZSBt\nZXRob2QgcmVwbGFjZWQKLSB1cGRhdGVkIFVSSSBUZW1wbGF0ZSBjb2RlIHRv\nIG1hdGNoIHYgMDMgb2YgdGhlIGRyYWZ0IHNwZWMKLSBhZGRlZCBhIGJ1bmNo\nIG9mIG5ldyBzcGVjaWZpY2F0aW9ucwoKIyBBZGRyZXNzYWJsZSAxLjAuNAot\nIHN3aXRjaGVkIHRvIHVzaW5nIFJTcGVjJ3MgcGVuZGluZyBzeXN0ZW0gZm9y\nIHNwZWNzIHRoYXQgcmVseSBvbiBJRE4KLSBmaXhlZCBpc3N1ZSB3aXRoIGNy\nZWF0aW5nIFVSSXMgd2l0aCBwYXRocyB0aGF0IGFyZSBub3QgcHJlZml4ZWQg\nd2l0aCAnLycKCiMgQWRkcmVzc2FibGUgMS4wLjMKLSBpbXBsZW1lbnRlZCBh\nIGhhc2ggbWV0aG9kCgojIEFkZHJlc3NhYmxlIDEuMC4yCi0gZml4ZWQgbWlu\nb3IgYnVnIHdpdGggdGhlIGV4dHJhY3RfbWFwcGluZyBtZXRob2QKCiMgQWRk\ncmVzc2FibGUgMS4wLjEKLSBmaXhlZCBtaW5vciBidWcgd2l0aCB0aGUgZXh0\ncmFjdF9tYXBwaW5nIG1ldGhvZAoKIyBBZGRyZXNzYWJsZSAxLjAuMAotIGhl\ndXJpc3RpYyBwYXJzZSBtZXRob2QgYWRkZWQKLSBwYXJzaW5nIGlzIHNsaWdo\ndGx5IG1vcmUgc3RyaWN0Ci0gcmVwbGFjZWQgdG9faCB3aXRoIHRvX2hhc2gK\nLSBmaXhlZCByb3V0aW5nIG1ldGhvZHMKLSBpbXByb3ZlZCBzcGVjaWZpY2F0\naW9ucwotIGltcHJvdmVkIGhlY2tsZSByYWtlIHRhc2sKLSBubyBzdXJ2aXZp\nbmcgaGVja2xlIG11dGF0aW9ucwoKIyBBZGRyZXNzYWJsZSAwLjEuMgotIGlt\ncHJvdmVkIG5vcm1hbGl6YXRpb24KLSBmaXhlZCBidWcgaW4gam9pbmluZyBh\nbGdvcml0aG0KLSB1cGRhdGVkIHNwZWNpZmljYXRpb25zCgojIEFkZHJlc3Nh\nYmxlIDAuMS4xCi0gdXBkYXRlZCBkb2N1bWVudGF0aW9uCi0gYWRkZWQgVVJJ\nIFRlbXBsYXRlIHZhcmlhYmxlIGV4dHJhY3Rpb24KCiMgQWRkcmVzc2FibGUg\nMC4xLjAKLSBpbml0aWFsIHJlbGVhc2UKLSBpbXBsZW1lbnRhdGlvbiBiYXNl\nZCBvbiBSRkMgMzk4NiwgMzk4NwotIHN1cHBvcnQgZm9yIElSSXMgdmlhIGxp\nYmlkbgotIHN1cHBvcnQgZm9yIHRoZSBVUkkgVGVtcGxhdGUgZHJhZnQgc3Bl\nYwo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/sporkmonger/addressable/contents/CHANGELOG.md?ref=master","git":"https://api.github.com/repos/sporkmonger/addressable/git/blobs/90531e1f1ffef614bfed0954c1b34ccf2b30ad58","html":"https://github.com/sporkmonger/addressable/blob/master/CHANGELOG.md"}}'
+    http_version: 
+  recorded_at: Fri, 12 Apr 2019 21:29:46 GMT
+recorded_with: VCR 4.0.0
