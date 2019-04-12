@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.3.0'
 
-  # s.files = `git ls-files exe lib LICENSE.txt README.md`.split($RS)
+  s.files = `git ls-files exe lib LICENSE.txt README.md`.split($RS)
   s.require_paths = ["lib"]
   s.bindir = 'exe'
   s.executables << 'whatthegem'

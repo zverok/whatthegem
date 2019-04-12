@@ -2,3 +2,4 @@ experiments
 tmp
 Gemfile.lock
 .env
+pkg

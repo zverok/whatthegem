@@ -45,3 +45,5 @@ _This functionality is ported from my earlier gem [any_good](https://github.com/
   * For other, not all gems have their Changelog findable, or parseable.
 
 ## Author
+
+[@zverok](https://zverok.github.io)
