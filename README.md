@@ -15,25 +15,25 @@ Showcase:
 
 ## `whatthegem <gem> info`
 
-![](https://raw.githubusercontent.com/zverok/whatthegem/master/screeenshots/info.png)
+![](https://github.com/zverok/whatthegem/blob/master/screenshots/info.png?raw=true)
 
 Just extracts gem's description and version from RubyGems.org and presents it to you alongside your local versions.
 
 ## `whatthegem <gem> usage`
 
-![](https://raw.githubusercontent.com/zverok/whatthegem/master/screeenshots/usage.png)
+![](https://github.com/zverok/whatthegem/blob/master/screenshots/usage.png?raw=true)
 
 Tries to parse gem's GitHub README (or local README, if gem is installed and includes it), and extract Ruby code blocks from there (except trivial, like "Add to your `Gemfile`: `gem 'gemname'`) and prints them. Typically, it is the main/most basic usage examples.
 
 ## `whatthegem <gem> changes`
 
-![](https://raw.githubusercontent.com/zverok/whatthegem/master/screeenshots/changes.png)
+![](https://github.com/zverok/whatthegem/blob/master/screenshots/changes.png?raw=true)
 
 Parses gem's GitHub `Changelog.md`/`NEWS`/`History`, or GitHub releases description, and lists versions and their changes (up to your local version, if it is older than recent one).
 
 ## `whatthegem <gem> stats`
 
-![](https://raw.githubusercontent.com/zverok/whatthegem/master/screeenshots/stats.png)
+![](https://github.com/zverok/whatthegem/blob/master/screenshots/stats.png?raw=true)
 
 Some statistics about gem's maintainance, freshness and popularity (again, from RubyGems.org and GitHub). It doesn't _judges_, just provides helpful quick insights.
 
