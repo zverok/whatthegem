@@ -1,13 +1,12 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift File.expand_path '../lib', __dir__
 
-require 'dotenv/load' # FIXME: Remove before release :)
 require 'whatthegem'
 
 name, cmd, *args = ARGV
 
 # FIXME: Currently, there is no gem named `help`, but what if it would be?
-# Maybe it is a reserve name?
+# Maybe it is a reserved name?
 if %w[help h --help -h].include?(name) || name.nil?
   WhatTheGem::Help.call
   exit
@@ -18,4 +17,4 @@ gem = WhatTheGem::Gem.fetch(name)
 
 WhatTheGem::Command.get(cmd)
   .then { |command| command || WhatTheGem::Help }
-  &.call(gem, *args)
+  .call(gem, *args)
