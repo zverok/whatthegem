@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/any_good.svg)](http://badge.fury.io/rb/any_good)
+[![Gem Version](https://badge.fury.io/rb/whatthegem.svg)](http://badge.fury.io/rb/whatthegem)
 
 `whatthegem` is a small utility to answer some questions about Ruby gems you work with, or planning to work with.
 
