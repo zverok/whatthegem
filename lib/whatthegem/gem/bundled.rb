@@ -42,12 +42,16 @@ module WhatTheGem
         true
       end
 
+      def materialized?
+        !spec.instance_variable_get('@specification').nil?
+      end
+
       def to_h
         {
           type: 'bundled',
           name: spec.name,
           version: spec.version.to_s,
-          dir: spec.gem_dir
+          dir: materialized? ? spec.gem_dir : '(not installed)'
         }
       end
     end
