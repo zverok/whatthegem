@@ -27,7 +27,7 @@ module WhatTheGem
         thresholds: [T.year.decrease(now), T.month.decrease(now, 2)],
         &Time.method(:parse)
 
-      metric 'Used by', :rubygems, :reverse_dependencies, :count, thresholds: [10, 100]
+      metric 'Dependents', :rubygems, :reverse_dependencies, :count, thresholds: [10, 100]
 
       metric 'Stars', :github, :repo, :stargazers_count, thresholds: [100, 500]
       metric 'Forks', :github, :repo, :forks_count, thresholds: [5, 20]
