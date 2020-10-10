@@ -17,7 +17,7 @@ module WhatTheGem
         'rails g ',       # rails generator
         'git clone',      # instructions to contribute
 
-        '\\$',            # bash command
+        '\A\\$ ',            # bash command
         'ruby (\S+)$',    # run one Ruby command
 
         'Copyright '      # Sometimes they render license in ```

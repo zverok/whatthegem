@@ -2,8 +2,7 @@ require 'rdoc'
 require 'kramdown'
 require 'pastel'
 
-# Will be necessary when switching to kramdown-2, but tty-markdown doesn't support it yet.
-# require 'kramdown-parser-gfm'
+require 'kramdown-parser-gfm'
 
 module WhatTheGem
   # I for Internal
@@ -48,7 +47,7 @@ module WhatTheGem
     end
 
     def ago_text(tm)
-      diff = TimeMath.measure(tm, Time.now)
+      diff = TimeCalc.now.-(tm).factorize
       unit, num = diff.detect { |_, v| !v.zero? }
       "#{num} #{unit} ago"
     end

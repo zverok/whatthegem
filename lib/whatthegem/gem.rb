@@ -13,9 +13,9 @@ module WhatTheGem
     end
 
     def self.fetch(name)
-      # Empty hash in rubygems info means it does not exist.
-      # FIXME: Could be wrong in case of: a) private gems and b) "local-only" command checks
-      new(name).then { |gem| gem.rubygems.info.empty?  ? NoGem.new(name) : gem }
+      new(name).tap { |gem| gem.rubygems.info } # This will fail with Gems::NotFound if it is nonexisting
+    rescue Gems::NotFound
+      NoGem.new(name)
     end
 
     attr_reader :name

@@ -1,5 +1,4 @@
 require 'tty/markdown'
-require_relative 'tty-markdown_patch'
 
 module WhatTheGem
   class Command
@@ -38,7 +37,7 @@ module WhatTheGem
     # bug: https://github.com/piotrmurach/tty-markdown/issues/11
     HEADER_TEMPLATE = Template.parse(<<~HEADER)
       # {{info.name}}
-      > {{info.info | paragraphs:1 | reflow }}
+      > **{{info.info | paragraphs:1 | reflow }}**
       > ({{uris | join:", "}})
 
       ## {{title}}
