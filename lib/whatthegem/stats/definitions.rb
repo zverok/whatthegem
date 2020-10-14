@@ -20,7 +20,7 @@ module WhatTheGem
 
       metric 'Downloads', :rubygems, :info, :downloads, thresholds: [5_000, 10_000]
       metric 'Latest version',
-        :rubygems, :versions, 0, :created_at,
+        :rubygems, :stable_versions, 0, :created_at,
         thresholds: [T.now.-(1, :year), T.now.-(2, :months)],
         &Time.method(:parse)
 

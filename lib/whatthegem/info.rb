@@ -8,6 +8,9 @@ module WhatTheGem
 
     TEMPLATE = Template.parse(<<~INFO)
                 Latest version: {{info.version}} ({{age}})
+      {% if prerelease %}
+                    Prerelease: {{prerelease.number}} ({{prerelease.age}})
+      {% endif %}
             Installed versions: {% if specs %}{{ specs | map:"version" | join: ", "}}{% else %}—{% endif %}
       {% if current %}
       Most recent installed at: {{current.dir}}
@@ -26,6 +29,7 @@ module WhatTheGem
       {
         info: gem.rubygems.info,
         age: age,
+        prerelease: prerelease,
         specs: specs,
         current: specs.last,
         bundled: gem.bundled.to_h,
@@ -36,9 +40,14 @@ module WhatTheGem
     private
 
     def age
-      gem.rubygems.versions
-        .first&.dig(:created_at)
-        &.then(&Time.method(:parse))&.then(&I.method(:ago_text))
+      version = gem.rubygems.stable_versions.first or return
+      version.dig(:created_at).then(&Time.method(:parse)).then(&I.method(:ago_text))
+    end
+
+    def prerelease
+      gem.rubygems.versions.first
+        &.then { |ver| ver if ver[:prerelease] }
+        &.then { |ver| ver.merge(age: I.ago_text(Time.parse(ver[:created_at]))) }
     end
 
     def specs

@@ -15,6 +15,10 @@ module WhatTheGem
         req(:versions)
       end
 
+      memoize def stable_versions
+        req(:versions).reject { |v| v[:prerelease] }
+      end
+
       memoize def reverse_dependencies
         req(:reverse_dependencies)
       end
