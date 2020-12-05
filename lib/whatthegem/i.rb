@@ -49,7 +49,7 @@ module WhatTheGem
     def ago_text(tm)
       diff = TimeCalc.now.-(tm).factorize
       unit, num = diff.detect { |_, v| !v.zero? }
-      "#{num} #{unit} ago"
+      "#{num} #{unit}#{'s' unless num == 1} ago"
     end
   end
 end
