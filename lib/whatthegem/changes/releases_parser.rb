@@ -14,7 +14,8 @@ module WhatTheGem
       end
 
       def versions
-        releases.map { |tag_name:, name:, body:, **|
+        releases.map { |rel|
+          tag_name, name, body = rel.fetch_values(:tag_name, :name, :body)
           Version.new(
             number: tag_name[VERSION_LINE_REGEXP, :version],
             header: name.then.reject(&:empty?).first || tag_name,
