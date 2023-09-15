@@ -15,7 +15,9 @@ RSpec.shared_examples 'parses successfully' do |name|
   end
 end
 
-RSpec.shared_examples 'parses changelog' do |name, versions:|
+RSpec.shared_examples 'parses changelog' do |name, options = {}|
+  versions = options[:versions]
+
   context "with #{name} -- full tests" do
     let(:gem_name) { name }
     include_context 'parse changelog'
