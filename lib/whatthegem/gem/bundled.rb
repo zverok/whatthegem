@@ -24,7 +24,7 @@ module WhatTheGem
       end
 
       def self.fetch(name)
-        return NoBundle.new(name) unless File.exists?('Gemfile') && File.exists?('Gemfile.lock')
+        return NoBundle.new(name) unless File.exist?('Gemfile') && File.exist?('Gemfile.lock')
 
         definition = Bundler::Definition.build('Gemfile', 'Gemfile.lock', nil)
         spec = definition.locked_gems.specs.detect { |s| s.name == name } or return NotBundled.new(name)
